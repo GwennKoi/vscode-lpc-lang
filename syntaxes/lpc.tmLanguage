@@ -486,29 +486,6 @@
 						<string>comment.block.lpc</string>
           </dict>
 					<dict>
-						<key>begin</key>
-						<string>//!(.*?)</string>
-						<key>captures</key>
-						<dict>
-							<key>0</key>
-							<dict>
-								<key>name</key>
-								<string>punctuation.definition.comment.lpc</string>
-              </dict>
-            </dict>
-						<key>end</key>
-						<string>^\s*(?!//!)</string>
-						<key>name</key>
-						<string>comment.block.documentation.lpcdoc.lpc</string>
-						<key>patterns</key>
-						<array>
-							<dict>
-								<key>include</key>
-								<string>#lpc_doc</string>
-              </dict>
-            </array>
-          </dict>
-					<dict>
 						<key>captures</key>
 						<dict>
 							<key>1</key>
@@ -604,97 +581,6 @@
 					<dict>
 						<key>include</key>
 						<string>$base</string>
-          </dict>
-        </array>
-      </dict>
-			<key>lpc_doc</key>
-			<dict>
-				<key>patterns</key>
-				<array>
-					<dict>
-						<key>captures</key>
-						<dict>
-							<key>1</key>
-							<dict>
-								<key>name</key>
-								<string>keyword.other.lpcdoc.lpc</string>
-              </dict>
-							<key>2</key>
-							<dict>
-								<key>name</key>
-								<string>meta.function.lpc</string>
-              </dict>
-            </dict>
-						<key>match</key>
-						<string>(@decl)\s+(.*?)$</string>
-						<key>patterns</key>
-						<array>
-							<dict>
-								<key>include</key>
-								<string>$self</string>
-              </dict>
-            </array>
-          </dict>
-					<dict>
-						<key>captures</key>
-						<dict>
-							<key>1</key>
-							<dict>
-								<key>name</key>
-								<string>keyword.other.lpcdoc.lpc</string>
-              </dict>
-            </dict>
-						<key>match</key>
-						<string>(?x)
-            (@
-              (
-                \[.*?\]|                # @[word]
-                [[:alnum:]]+\{.*?@\}|   # @word{something@}
-                [[:alnum:]]+\{.*?        # @word{Multiline content
-              )
-              |
-              (@)\}                      # @} closes multiline content
-            )
-          </string>
-						<key>name</key>
-						<string>meta.tag.inline.lpcdoc.lpc</string>
-          </dict>
-					<dict>
-						<key>match</key>
-						<string>((https?|s?ftp|ftps|file|smb|afp|nfs|(x-)?man|gopher|txmt)://|mailto:)[-:@a-zA-Z0-9_.~%+/?=&amp;#]+(?&lt;![.?:])</string>
-						<key>name</key>
-						<string>markup.underline.link.lpc</string>
-          </dict>
-					<dict>
-						<key>captures</key>
-						<dict>
-							<key>1</key>
-							<dict>
-								<key>name</key>
-								<string>keyword.other.lpcdoc.lpc</string>
-              </dict>
-							<key>2</key>
-							<dict>
-								<key>name</key>
-								<string>markup.underline.link.lpc</string>
-              </dict>
-            </dict>
-						<key>match</key>
-						<string>(@link)\s+(.+)\s*$</string>
-          </dict>
-					<dict>
-						<key>match</key>
-						<string>(?x)
-                   \@(
-                      param|mapping|endmapping|returns|seealso|item|dl|enddl|
-                      note|module|endmodule|member|example|see|throws|pre|xml|
-                      i|b|ref|ul|endul|code|endcode|int|endint|value|
-                      string|endstring|array|endarray|fixme|ignore|endignore|
-                      image|p|link|deprecated|bugs|copyright|thanks|text|
-                      mixed|endmixed|type|ol|endol
-                   )\b</string>
-						<key>name</key>
-						<string>keyword.other.lpcdoc.lpc</string>
           </dict>
         </array>
       </dict>
