@@ -1,0 +1,278 @@
+[
+  {
+    "abs": {
+      "prefix": "abs",
+      "body": "abs(${1:float f|int i})"
+    }
+  },
+  {
+    "base_name": {
+      "prefix": "base_name",
+      "body": "base_name(${1:object ob})"
+    }
+  },
+  {
+    "classes": {
+      "prefix": "classes",
+      "body": "classes(${1:object ob}, ${2:int flag})"
+    }
+  },
+  {
+    "compressedp": {
+      "prefix": "compressedp",
+      "body": "compressedp(${object ob})"
+    }
+  },
+  {
+    "copy": {
+      "prefix": "copy",
+      "body": "copy(${1:mixed})"
+    }
+  },
+  {
+    "debug_message": {
+      "prefix": "debug_message",
+      "body": "debug_message(${1:string msg})"
+    }
+  },
+  {
+    "element_of": {
+      "prefix": "",
+      "body": ""
+    }
+  },
+  {
+    "event": {
+      "prefix": "element_of",
+      "body": "element_of(${1:mixed *arr})"
+    }
+  },
+  {
+    "fetch_variable": {
+      "prefix": "fetch",
+      "body": "fetch_variable(${1:string variable},${2:void|object ob})"
+    }
+  },
+  {
+    "file_length": {
+      "prefix": "file_length",
+      "body": "file_length(${1:string filepath})"
+    }
+  },
+  {
+    "function_owner": {
+      "prefix": "function_owner",
+      "body": "function_owner(${1:function func})"
+    }
+  },
+  {
+    "functions": {
+      "prefix": "functions",
+      "body": "functions(${1:object ob},${2:int flag})"
+    }
+  },
+  {
+    "get_garbage": {
+      "prefix": "get_garbage",
+      "body": "get_garbage()"
+    }
+  },
+  {
+    "heart_beats": {
+      "prefix": "heart_beats",
+      "body": "heart_beats()"
+    }
+  },
+  {
+    "is_daylight_savings_time": {
+      "prefix": "is_daylight_savings_time",
+      "body": "is_daylight_savings_time(${1:string timezone},${2:int})"
+    }
+  },
+  {
+    "max": {
+      "prefix": "max",
+      "body": "max(${1:mixed *arr})"
+    }
+  },
+  {
+    "memory_summary": {
+      "prefix": "memory_summary",
+      "body": "memory_summary()"
+    }
+  },
+  {
+    "min": {
+      "prefix": "min",
+      "body": "min(${1:mixed *arr})"
+    }
+  },
+  {
+    "named_livings": {
+      "prefix": "named_livings",
+      "body": "named_livings()"
+    }
+  },
+  {
+    "network_stats": {
+      "prefix": "network_stats",
+      "body": "network_stats()"
+    }
+  },
+  {
+    "num_classes": {
+      "prefix": "num_classes",
+      "body": "num_classes(${1:object ob})"
+    }
+  },
+  {
+    "pluralize": {
+      "prefix": "pluralize",
+      "body": "pluralize(${1:string str})"
+    }
+  },
+  {
+    "program_info": {
+      "prefix": "program_info",
+      "body": "program_info(${1:void|object ob})"
+    }
+  },
+  {
+    "query_charmode": {
+      "prefix": "query_charmode",
+      "body": "query_charmode(${1:object ob})"
+    }
+  },
+  {
+    "query_ip_port": {
+      "prefix": "query_ip_port",
+      "body": "query_ip_port(${1:void|object interactive})"
+    }
+  },
+  {
+    "query_notify_fail": {
+      "prefix": "query_notify_fail",
+      "body": "query_notify_fail()"
+    }
+  },
+  {
+    "query_num": {
+      "prefix": "query_num",
+      "body": "query_num(${1:int number},${2:int limit})"
+    }
+  },
+  {
+    "query_replaced_program": {
+      "prefix": "query_replaced_program",
+      "body": "query_replaced_program(${1:void|object ob})"
+    }
+  },
+  {
+    "real_time": {
+      "prefix": "real_time",
+      "body": "real_time()"
+    }
+  },
+  {
+    "remove_charmode": {
+      "prefix": "remove_charmode",
+      "body": "remove_charmode(${1:object ob})"
+    }
+  },
+  {
+    "remove_get_char": {
+      "prefix": "remove_get_char",
+      "body": "remove_get_char(${1:object ob})"
+    }
+  },
+  {
+    "remove_interactive": {
+      "prefix": "remove_interactive",
+      "body": "remove_interactive(${1:object interactive})"
+    }
+  },
+  {
+    "remove_shadow": {
+      "prefix": "remove_shadow",
+      "body": "remove_shadow(${1:object ob})"
+    }
+  },
+  {
+    "repeat_string": {
+      "prefix": "repeat_string",
+      "body": "repeat_string(${1:string expression},${2:int num_times})"
+    }
+  },
+  {
+    "replaceable": {
+      "prefix": "replaceable",
+      "body": "replaceable(${1:object ob},${2:void|string *ignore_list})"
+    }
+  },
+  {
+    "restore_from_string": {
+      "prefix": "restore_from_string",
+      "body": "restore_from_string(${1:string restore_string},${2:int flag})"
+    }
+  },
+  {
+    "roll_MdN": {
+      "prefix": "roll_MdN",
+      "body": "roll_MdN(${1:int num_dice},${2:int size_dice})"
+    }
+  },
+  {
+    "send_nullbyte": {
+      "prefix": "send_nullbyte",
+      "body": "send_nullbyte(${1:object interactive})"
+    }
+  },
+  {
+    "shuffle": {
+      "prefix": "shuffle",
+      "body": "shuffle(${1:mixed *array})"
+    }
+  },
+  {
+    "store_variable": {
+      "prefix": "store_variable",
+      "body": "store_variable(${1:string varname},${2:mixed value},${3:void|object ob})"
+    }
+  },
+  {
+    "string_difference": {
+      "prefix": "string_difference",
+      "body": "string_difference(${1:string a},${2:string b})"
+    }
+  },
+  {
+    "terminal_colour": {
+      "prefix": "terminal_colour",
+      "body": "terminal_colour(${1:string str},${2:mapping vals},${3:int wrap},${4:int indent})"
+    }
+  },
+  {
+    "test_load": {
+      "prefix": "test_load",
+      "body": "test_load(${1:string filename})"
+    }
+  },
+  {
+    "upper_case": {
+      "prefix": "upper_case",
+      "body": "upper_case(${1:string str})"
+    }
+  },
+  {
+    "variables": {
+      "prefix": "variables",
+      "body": "variables(${1:object ob},${2:int flag})"
+    }
+  },
+  {
+    "zonetime": {
+      "prefix": "zonetime",
+      "body": "zonetime(${1:string timezone},${2:int unixtime})"
+    }
+  }
+]
