@@ -89,7 +89,7 @@
 				<key>comment</key>
 				<string>Modifiers</string>
 				<key>match</key>
-				<string>\b(public|protected|private|constant|inline|local|final|optional|variant)\b</string>
+				<string>\b(public|private)\b</string>
 				<key>name</key>
 				<string>storage.modifier.lpc</string>
       </dict>
@@ -340,7 +340,7 @@
       </dict>
 			<dict>
 				<key>begin</key>
-				<string>^\s*#\s*(define|defined|elif|elseif|else|if|ifdef|ifndef|(line|[0-9]+)|pragma|undef|undefine|endif|charset|lpc|string|require|COUNTER|warning|error)\b</string>
+				<string>^\s*#\s*(define|echo|defined|elif|else|if|ifdef|ifndef|(line|[0-9]+)|pragma|undef|undefine|endif)\b</string>
 				<key>captures</key>
 				<dict>
 					<key>1</key>
