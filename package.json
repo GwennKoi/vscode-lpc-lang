@@ -49,6 +49,10 @@
       {
         "language": "lpc",
         "path": "./snippets/lpc-buffers.json"
+      },
+      {
+        "language": "lpc",
+        "path": "./snippets/lpc-calls.json"
       }
 
     ]

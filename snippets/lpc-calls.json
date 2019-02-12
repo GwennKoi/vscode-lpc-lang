@@ -1,0 +1,63 @@
+[
+  {
+    "call_other":  {
+      "prefix": "call_other",
+      "body": "call_other(${1:object ob|*obs},${2:string func|mixed *args}${3:,mixed args...})"
+    }
+  },
+  {
+    "call_out":  {
+      "prefix": "call_out",
+      "body": "call_other(${1:string|function fun},${2:int delay}${3:,mixed arg})"
+    }
+  },
+  {
+    "catch":  {
+      "prefix": "catch",
+      "body": "catch(${1:mixed expression})"
+    }
+  },
+  {
+    "origin":  {
+      "prefix": "origin",
+      "body": "origin()"
+    }
+  },
+  {
+    "previous_object":  {
+      "prefix": "previous_object",
+      "body": "previous_object(${1:void|int prevobs})"
+    }
+  },
+  {
+    "shadowp":  {
+      "prefix": "shadowp",
+      "body": "shadowp(${1:object ob)"
+    }
+  },
+  {
+    "remove_call_out":  {
+      "prefix": "remove_call_out",
+      "body": "remove_call_out(${1:void|string fun})"
+    }
+  },
+  {
+    "shadow":  {
+      "prefix": "shadow",
+      "body": "shadow(${1:object ob},${2:int flag})"
+    }
+  },
+  {
+    "this_object":  {
+      "prefix": "this_object",
+      "body": "this_object()"
+    }
+  },
+  {
+    "throw":  {
+      "prefix": "throw",
+      "body": "throw(${1:mixed return})"
+    }
+  },
+
+]
