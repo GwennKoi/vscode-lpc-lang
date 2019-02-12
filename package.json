@@ -19,8 +19,14 @@
     "languages": [
       {
         "id": "lpc",
-        "aliases": [ "LPC", "lpc" ],
-        "extensions": [ ".c", ".h" ],
+        "aliases": [
+          "LPC",
+          "lpc"
+        ],
+        "extensions": [
+          ".c",
+          ".h"
+        ],
         "configuration": "./language-configuration.json"
       }
     ],
@@ -35,7 +41,12 @@
       {
         "language": "lpc",
         "path": "./snippets/lpc-snippets.json"
+      },
+      {
+        "language": "lpc",
+        "path": "./snippets/lpc-arrays.json"
       }
+
     ]
   }
 }

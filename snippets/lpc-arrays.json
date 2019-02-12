@@ -1,0 +1,82 @@
+[
+  {
+    "allocate": {
+       "prefix": "allocate",
+       "body": "allocate(${1:int size}${, 2:mixed values})"
+     }
+  },
+  {
+     "arrayp": {
+       "prefix": "arrayp",
+       "body": "arrayp(${1:mixed array})"
+    }
+  },
+  {
+     "filter_array_string": {
+       "prefix": "fils",
+       "body": "filter_array(${1:mixed *arr},${2:string func},${3:object ob},${4:mixed args...})"
+    }
+  },
+  {
+    "filter_array_func": {
+        "prefix": "filf",
+        "body": "filter_array(${1:mixed *arr},(: ${0} :))"
+    }
+  },
+  {
+    "map_array_string": {
+      "prefix": "maps",
+      "body": "map_array(${1:mixed *arr},${2:string fun},${3:object ob},${4:mixed args...})"
+    }
+  },
+  {
+    "map_array_func": {
+
+      "prefix": "mapf",
+      "body": "map_array(${1:mixed *arr},(: ${2} :))"
+    }
+  },
+  {
+    "member_array": {
+      "prefix": "mema",
+      "body": "member_array(${2:mixed item},${1:mixed *arr|string str}${3:,void|int start}) != -1${0}"
+    }
+  },
+  {
+    "pointerp": {
+      "prefix": "pointerp",
+      "body": "pointerp(${1:mixed pointer}"
+    }
+  },
+  {
+    "sort_array_string": {
+      "prefix": "sorts",
+      "body": "sort_array(${1:mixed *array},${2:string func}${3:,object ob})"
+    }
+  },
+  {
+    "sort_array_func": {
+      "prefix": "sortf",
+      "body": "sort_array(${1:mixed *array},(: ${0} :))"
+    }
+  },
+  {
+    "sort_array": {
+      "prefix": "sort",
+      "body": "sort_array(${1:mixed *array},${2:int direction})"
+    }
+  },
+  {
+    "unique_array_string": {
+      "prefix": "uniqs",
+      "body": "unique_array(${1:object *array},${2:string func},${3,void|mixed skip})"
+    }
+  },
+  {
+    "unique_array_func": {
+      "prefix": "uniqf",
+      "body": "unique_array(${1:object *array},(: ${2} :),${3,void|mixed skip})"
+    }
+  },
+
+]
