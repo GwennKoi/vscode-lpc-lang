@@ -1,0 +1,33 @@
+[
+  {
+    "allocate_buffer": {
+      "prefix": "allob",
+      "body": "allocate_buffer(${1:int size})"
+    }
+  },
+  {
+    "bufferp": {
+      "prefix": "bufferp",
+      "body": "bufferp(${1:mixed buffer})"
+    }
+  },
+  {
+    "crc32": {
+      "prefix": "crc",
+      "body": "crc32(${1:buffer|string buffer})"
+    }
+  },
+  {
+    "read_buffer": {
+      "prefix": "readb",
+      "body": "read_buffer(${1:string|buffer src},${2:int start},${3:int length})"
+    }
+  },
+  {
+    "write_buffer": {
+      "prefix": "writeb",
+      "body": "write_buffer(${1:string|buffer dest},${2:int start},${3:mixed src})"
+    }
+  },
+
+]
