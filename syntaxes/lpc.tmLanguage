@@ -8,7 +8,7 @@
 			<string>h</string>
     </array>
 		<key>firstLineMatch</key>
-		<string>(-[*]-( [Mm]ode:)? [Pp]ike -[*]-|^#!/.*\blpc\b)</string>
+		<string>(-[*]-( [Mm]ode:)? [Ll][Pp][Cc] -[*]-|^#!/.*\blpc\b)</string>
 		<key>foldingStartMarker</key>
 		<string>(?x)
      /\*\*(?!\*)
@@ -75,13 +75,13 @@
 				<key>comment</key>
 				<string>Control flow keywords</string>
 				<key>match</key>
-				<string>\b(if|else|while|for|foreach|do|return|continue|break|switch|case|default|goto|catch|lambda|gauge|inherit|import)\b</string>
+				<string>\b(if|else|while|for|foreach|do|return|continue|break|switch|case|default|catch|inherit)\b</string>
 				<key>name</key>
 				<string>keyword.control.lpc</string>
       </dict>
 			<dict>
 				<key>match</key>
-				<string>\b(enum|float|int|typedef|void|object|class|mapping|string|array|multiset|mixed|function|program|bool|auto)\b</string>
+				<string>\b(float|int|void|object|class|mapping|string|mixed|function)\b</string>
 				<key>name</key>
 				<string>storage.type.lpc</string>
       </dict>
@@ -144,6 +144,20 @@
           </dict>
         </array>
       </dict>
+			<dict>
+				<key>comment</key>
+				<string>Multiline string literal</string>
+				<key>match</key>
+				<string>(@{1,2}(\w*))\n((.|\n)*?)\n(###\s*)?(\2)\b</string>
+				<key>captures</key>
+				<dict>
+					<key>3</key>
+					<dict>
+						<key>name</key>
+						<string>string.quoted.block.lpc</string>
+					</dict>
+				</dict>
+			</dict>
 			<dict>
 				<key>begin</key>
 				<string>'</string>
@@ -242,32 +256,7 @@
       </dict>
 			<dict>
 				<key>begin</key>
-				<string>^\s*#\s*(error|warning)\b</string>
-				<key>captures</key>
-				<dict>
-					<key>1</key>
-					<dict>
-						<key>name</key>
-						<string>keyword.control.import.error.lpc</string>
-          </dict>
-        </dict>
-				<key>end</key>
-				<string>$</string>
-				<key>name</key>
-				<string>meta.preprocessor.diagnostic.lpc</string>
-				<key>patterns</key>
-				<array>
-					<dict>
-						<key>match</key>
-						<string>(?&gt;\\\s*\n)</string>
-						<key>name</key>
-						<string>punctuation.separator.continuation.lpc</string>
-          </dict>
-        </array>
-      </dict>
-			<dict>
-				<key>begin</key>
-				<string>^\s*#\s*(include|string)\b</string>
+				<string>^\s*#\s*(include)\b</string>
 				<key>captures</key>
 				<dict>
 					<key>1</key>
@@ -340,7 +329,7 @@
       </dict>
 			<dict>
 				<key>begin</key>
-				<string>^\s*#\s*(define|echo|defined|elif|else|if|ifdef|ifndef|(line|[0-9]+)|pragma|undef|undefine|endif)\b</string>
+				<string>^\s*#\s*(define|echo|elif|else|if|ifdef|ifndef|pragma|undef|endif)\b</string>
 				<key>captures</key>
 				<dict>
 					<key>1</key>
@@ -365,25 +354,7 @@
       </dict>
 			<dict>
 				<key>begin</key>
-				<string>(?x)
-        (?:  ^                                                    # begin-of-line
-            |
-             (?: (?= \s )           (?&lt;!else|return) (?&lt;=\w)    #  or word + space before name
-               | (?= \s*[[:alnum:]_.|\(\)] )    #  or type modifier before name
-             )
-        )
-        (\s*) (?!\b(while|for|do|if|else|switch|catch|return|foreach|
-                   object|int|float|function|mapping|array|multiset|
-                   string|lambda|program|mixed|class)\b\s*)
-        (
-          (?:
-            `\(\)|                                              # Function call
-            `[-&lt;.&gt;^|&amp;*~/+%=!\[\]]+|                             # Operator overloading
-            `[[:alpha:]_][[:alnum:]_]*+|                          # Getter/setter
-            [[:alpha:]_][[:alnum:]_]*+                            # function name
-          )++                                                     # Complete actual name
-        )
-         \s*(?=\()</string>
+				<string>(?x)(?:^|(?:(?=\s)(?&lt;!else|return)(?&lt;=\w)|(?=\s*[[:alnum:]_.|\(\)])))(\s*)(?!\b(while|for|do|if|else|switch|catch|return|foreach|object|int|float|function|mapping|string|mixed|class)\b\s*)((?:`\(\)|`[-&lt;.&gt;^|&amp;*~/+%=!\[\]]+|`[[:alpha:]_][[:alnum:]_]*+|[[:alpha:]_][[:alnum:]_]*+)++)\s*(?=\()</string>
 				<key>beginCaptures</key>
 				<dict>
 					<key>1</key>
@@ -548,10 +519,10 @@
 						<string>(?x)
                      (?: (?= \s )  (?:(?&lt;=else|new|return) | (?&lt;!\w)) (\s+))?
                      (\b
-                      (?!(while|for|do|if|else|foreach|lambda|switch|
-                          catch|enumerate|return|
-                          mapping|multiset|mixed|int|float|class|function|array|
-                          string|program|object|bool|auto|variant)\s*\()
+                      (?!(while|for|do|if|else|foreach|switch|
+                          catch|return|
+                          mapping|mixed|int|float|class|function|
+                          string|object)\s*\()
                         (?: `\(\)                  |
                             `[-&lt;.&gt;^|&amp;*~/+%=!\[\]]+ |
                             `[[:alnum:]_]            |
