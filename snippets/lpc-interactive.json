@@ -1,0 +1,224 @@
+[
+  {
+    "add_action": {
+      "prefix": "add_action",
+      "body": "add_action(${1:string|function fun},${2:string|string *cmd},${3:int flag})"
+    }
+  },
+  {
+    "command": {
+      "prefix": "command",
+      "body": "command(${1:string str},${2:object ob})"
+    }
+  },
+  {
+    "commands": {
+      "prefix": "commands",
+      "body": "commands()"
+    }
+  },
+  {
+    "disable_commands": {
+      "prefix": "disable_commands",
+      "body": "disable_commands()"
+    }
+  },
+  {
+    "disable_wizard": {
+      "prefix": "disable_wizard",
+      "body": "disable_wizard()"
+    }
+  },
+  {
+    "ed": {
+      "prefix": "ed",
+      "body": "ed(${1:string file},${2:string exit_fn},${3:int restricted})"
+    }
+  },
+  {
+    "ed_wf": {
+      "prefix": "ed",
+      "body": "ed(${1:string file},${2:string write_fn},${3:string exit_fn},${4:int restricted})"
+    }
+  },
+  {
+    "enable_commands": {
+      "prefix": "enable_commands",
+      "body": "enable_commands(${1:void|int setup_actions})"
+    }
+  },
+  {
+    "exec": {
+      "prefix": "exec",
+      "body": "exec(${1:object to},${2:object from})"
+    }
+  },
+  {
+    "find_player": {
+      "prefix": "find_player",
+      "body": "find_player(${1:string str})"
+    }
+  },
+  {
+    "get_char": {
+      "prefix": "get_char",
+      "body": "get_char(${1:string|function fun},${2:int flag},${3:...})"
+    }
+  },
+  {
+    "in_edit": {
+      "prefix": "in_edit",
+      "body": "in_edit(${1:void|object player})"
+    }
+  },
+  {
+    "in_input": {
+      "prefix": "in_input",
+      "body": "in_input(${1:void|object player})"
+    }
+  },
+  {
+    "input_to": {
+      "prefix": "input_to",
+      "body": "input_to(${1:string|function fun},${2:int flag},${3:...})"
+    }
+  },
+  {
+    "interactive": {
+      "prefix": "interactive",
+      "body": "interactive(${1:object ob})"
+    }
+  },
+  {
+    "message": {
+      "prefix": "message",
+      "body": "message(${1:mixed class},${2:string message},${3:mixed target},${4:void|mixed exclude})"
+    }
+  },
+  {
+    "notify_fail": {
+      "prefix": "notify_fail",
+      "body": "notify_fail(${1:string|function str})"
+    }
+  },
+  {
+    "printf": {
+      "prefix": "printf",
+      "body": "printf(${1:string format},${2:...})"
+    }
+  },
+  {
+    "sprintf": {
+      "prefix": "sprintf",
+      "body": "sprintf(${1:string format},${2:...})"
+    }
+  },
+  {
+    "query_host_name": {
+      "prefix": "query_host_name",
+      "body": "query_host_name()"
+    }
+  },
+  {
+    "query_idle": {
+      "prefix": "query_idle",
+      "body": "query_idle(${1:object ob})"
+    }
+  },
+  {
+    "query_ip_name": {
+      "prefix": "query_ip_name",
+      "body": "query_ip_name(${1:object ob})"
+    }
+  },
+  {
+    "query_ip_number": {
+      "prefix": "query_ip_number",
+      "body": "query_ip_number(${1:object ob})"
+    }
+  },
+  {
+    "query_snoop": {
+      "prefix": "query_snoop",
+      "body": "query_snoop(${1:object ob})"
+    }
+  },
+  {
+    "query_snooping": {
+      "prefix": "query_snooping",
+      "body": "query_snooping(${1:object ob})"
+    }
+  },
+  {
+    "receive": {
+      "prefix": "receive",
+      "body": "receive(${1:string message})"
+    }
+  },
+  {
+    "remove_action": {
+      "prefix": "remove_action",
+      "body": "remove_action(${1:string fun},${2:string cmd})"
+    }
+  },
+  {
+    "resolve": {
+      "prefix": "resolve",
+      "body": "resolve(${1:string address},${2:string callback_func})"
+    }
+  },
+  {
+    "say": {
+      "prefix": "say",
+      "body": "say(${1:string str},${2:object obj})"
+    }
+  },
+  {
+    "set_this_player": {
+      "prefix": "set_this_player",
+      "body": "set_this_player(${1:object who})"
+    }
+  },
+  {
+    "shout": {
+      "prefix": "shout",
+      "body": "shout(${1:string str})"
+    }
+  },
+  {
+    "snoop": {
+      "prefix": "snoop",
+      "body": "snoop(${1:object snooper},${2:object snoopee})"
+    }
+  },
+  {
+    "this_interactive": {
+      "prefix": "this_interactive",
+      "body": "this_interactive()"
+    }
+  },
+  {
+    "this_player": {
+      "prefix": "this_player",
+      "body": "this_player(${1:int flag})"
+    }
+  },
+  {
+    "userp": {
+      "prefix": "userp",
+      "body": "userp(${1:object player})"
+    }
+  },
+  {
+    "users": {
+      "prefix": "users",
+      "body": "users()"
+    }
+  },
+  {
+    "write": {
+      "prefix": "write",
+      "body": "write(${1:mixed message})"
+    }
+  }
+]
