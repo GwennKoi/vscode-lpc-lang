@@ -77,6 +77,10 @@
       {
         "language": "lpc",
         "path": "./snippets/lpc-functions.json"
+      },
+      {
+        "language": "lpc",
+        "path": "./snippets/lpc-general.json"
       }
 
     ]
