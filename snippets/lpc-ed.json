@@ -1,0 +1,20 @@
+[
+  {
+    "ed_cmd": {
+      "prefix": "ed_cmd",
+      "body": "ed_cmd(${1:string cmd})"
+    }
+  },
+  {
+    "ed_start": {
+      "prefix": "ed_start",
+      "body": "ed_start(${1:void|string file},${2:void|int restricted})"
+    }
+  },
+  {
+    "query_ed_mode": {
+      "prefix": "query_ed_mode",
+      "body": "query_ed_mode()"
+    }
+  }
+]
