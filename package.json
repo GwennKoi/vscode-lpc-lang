@@ -73,6 +73,10 @@
       {
         "language": "lpc",
         "path": "./snippets/lpc-floats.json"
+      },
+      {
+        "language": "lpc",
+        "path": "./snippets/lpc-functions.json"
       }
 
     ]

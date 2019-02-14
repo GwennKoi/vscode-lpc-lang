@@ -1,0 +1,26 @@
+[
+  {
+    "apply": {
+      "prefix": "apply",
+      "body": "apply(${1:mixed f},${2:mixed *args})"
+    }
+  },
+  {
+    "bind": {
+      "prefix": "bind",
+      "body": "bind(${1:function f},${2:object ob})"
+    }
+  },
+  {
+    "evaluate": {
+      "prefix": "evaluate",
+      "body": "aluate(${1:mixed f}${2:,...})"
+    }
+  },
+  {
+    "functionp": {
+      "prefix": "functionp",
+      "body": "functionp(${1:mixed arg})"
+    }
+  }
+]
