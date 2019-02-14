@@ -1,0 +1,85 @@
+[{
+    "acos": {
+      "prefix": "acos",
+      "body": "acos(${1:float f})"
+    }
+  },
+  {
+    "asin": {
+      "prefix": "asin",
+      "body": "asin(${1:float f})"
+    }
+  },
+  {
+    "atan": {
+      "prefix": "atan",
+      "body": "atan(${1:float f})"
+    }
+  },
+  {
+    "ceil": {
+      "prefix": "ceil",
+      "body": "ceil(${1:float f})"
+    }
+  },
+  {
+    "cos": {
+      "prefix": "cos",
+      "body": "cos(${1:float f})"
+    }
+  },
+  {
+    "exp": {
+      "prefix": "exp",
+      "body": "exp(${1:float f})"
+    }
+  },
+  {
+    "floatp": {
+      "prefix": "floatp",
+      "body": "floatp(${1:mixed arg})"
+    }
+  },
+  {
+    "floor": {
+      "prefix": "floor",
+      "body": "floor(${1:float f})"
+    }
+  },
+  {
+    "log": {
+      "prefix": "log",
+      "body": "log(${1:float f})"
+    }
+  },
+  {
+    "pow": {
+      "prefix": "pow",
+      "body": "pow(${1:float x},${2:float y})"
+    }
+  },
+  {
+    "sin": {
+      "prefix": "sin",
+      "body": "sin(${1:float f})"
+    }
+  },
+  {
+    "sqrt": {
+      "prefix": "sqrt",
+      "body": "sqrt(${1:float f})"
+    }
+  },
+  {
+    "tan": {
+      "prefix": "tan",
+      "body": "tan(${1:float f})"
+    }
+  },
+  {
+    "to_int": {
+      "prefix": "to_int",
+      "body": "to_int(${1:float|buffer x})"
+    }
+  }
+]

@@ -69,6 +69,10 @@
       {
         "language": "lpc",
         "path": "./snippets/lpc-filesystem.json"
+      },
+      {
+        "language": "lpc",
+        "path": "./snippets/lpc-floats.json"
       }
 
     ]
