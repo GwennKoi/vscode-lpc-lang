@@ -65,6 +65,10 @@
       {
         "language": "lpc",
         "path": "./snippets/lpc-ed.json"
+      },
+      {
+        "language": "lpc",
+        "path": "./snippets/lpc-filesystem.json"
       }
 
     ]
