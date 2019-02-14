@@ -1,0 +1,50 @@
+[
+  {
+    "db_close": {
+      "prefix": "db_close",
+      "body": "db_close(${1:int handle})"
+    }
+  },
+  {
+    "db_commit": {
+      "prefix": "db_commit",
+      "body": "db_commit(${1:int handle})"
+    }
+  },
+  {
+    "db_connect": {
+      "prefix": "db_connect",
+      "body": "db_connect(${1:string host},${2:string db})"
+    }
+  },
+  {
+    "db_connect_user": {
+      "prefix": "db_connect",
+      "body": "db_connect(${1:string host},${2:string db},${3:string user})"
+    }
+  },
+  {
+    "db_connect_user_type": {
+      "prefix": "db_connect",
+      "body": "db_connect(${1:string host},${2:string db},${3:string user},${4:int type})"
+    }
+  },
+  {
+    "db_exec": {
+      "prefix": "db_exec",
+      "body": "db_exec(${1:int handle},${2:string sql_query})"
+    }
+  },
+  {
+    "db_fetch": {
+      "prefix": "db_fetch",
+      "body": "db_fetch(${1:int handle},${2:int row})"
+    }
+  },
+  {
+    "db_status": {
+      "prefix": "db_status",
+      "body": "db_status()"
+    }
+  }
+]

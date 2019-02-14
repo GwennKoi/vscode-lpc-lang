@@ -28,6 +28,5 @@
       "prefix": "writeb",
       "body": "write_buffer(${1:string|buffer dest},${2:int start},${3:mixed src})"
     }
-  },
-
+  }
 ]
