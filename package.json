@@ -80,6 +80,10 @@
       {
         "language": "lpc",
         "path": "./snippets/lpc-interactive.json"
+      },
+      {
+        "language": "lpc",
+        "path": "./snippets/lpc-mappings.json"
       }
 
     ]
