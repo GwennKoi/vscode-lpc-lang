@@ -16,29 +16,24 @@
     "url": "https://github.com/undeadfish/vscode-lpc-lang.git"
   },
   "contributes": {
-    "languages": [
-      {
-        "id": "lpc",
-        "aliases": [
-          "LPC",
-          "lpc"
-        ],
-        "extensions": [
-          ".c",
-          ".h"
-        ],
-        "configuration": "./language-configuration.json"
-      }
-    ],
-    "grammars": [
-      {
-        "language": "lpc",
-        "scopeName": "source.lpc",
-        "path": "./syntaxes/lpc.tmLanguage"
-      }
-    ],
-    "snippets": [
-      {
+    "languages": [{
+      "id": "lpc",
+      "aliases": [
+        "LPC",
+        "lpc"
+      ],
+      "extensions": [
+        ".c",
+        ".h"
+      ],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "lpc",
+      "scopeName": "source.lpc",
+      "path": "./syntaxes/lpc.tmLanguage"
+    }],
+    "snippets": [{
         "language": "lpc",
         "path": "./snippets/lpc-snippets.json"
       },
