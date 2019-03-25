@@ -1,0 +1,25 @@
+[{
+    "parse_command": {
+      "prefix": "parse_command",
+      "body": "parse_command( ${1:string command}, ${2:object env|object *oblist}, ${3:string pattern}${4:, mixed arg, ...})"
+    }
+  },
+  {
+    "process_string": {
+      "prefix": "process_string",
+      "body": "process_string(${1:string combinestring})"
+    }
+  },
+  {
+    "process_value": {
+      "prefix": "process_value",
+      "body": "process_value(${1:string calldescription})"
+    }
+  },
+  {
+    "query_verb": {
+      "prefix": "query_verb",
+      "body": "query_verb()"
+    }
+  }
+]

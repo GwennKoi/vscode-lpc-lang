@@ -88,6 +88,10 @@
       {
         "language": "lpc",
         "path": "./snippets/lpc-numbers.json"
+      },
+      {
+        "language": "lpc",
+        "path": "./snippets/lpc-parsing.json"
       }
 
     ]
