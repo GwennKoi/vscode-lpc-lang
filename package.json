@@ -84,6 +84,10 @@
       {
         "language": "lpc",
         "path": "./snippets/lpc-mappings.json"
+      },
+      {
+        "language": "lpc",
+        "path": "./snippets/lpc-numbers.json"
       }
 
     ]

@@ -1,0 +1,20 @@
+[
+  {
+    "call_other":  {
+      "prefix": "intp",
+      "body": "intp(${1:mixed arg})"
+    }
+  },
+  {
+    "call_other":  {
+      "prefix": "random",
+      "body": "random(${1:int num})"
+    }
+  },
+  {
+    "call_other":  {
+      "prefix": "to_float",
+      "body": "to_float(${1:int i})"
+    }
+  }
+]
