@@ -4,7 +4,7 @@
       "prefix": "do",
       "body": [
         "do {",
-        "  ${2:// body}",
+        "  ${0:// body}",
         "} while (${1:true});"
       ]
     }
@@ -13,8 +13,8 @@
     "Foreach key/value Loop": {
       "prefix": "forek",
       "body": [
-        "foreach (${1:mapping}; ${2:string key}; ${3:mixed value}) {",
-        "  ${4}",
+        "foreach (${2:mixed key}, ${3:mixed value} in ${1:mapping m}) {",
+        "  ${0://body}",
         "}"
       ]
     }
@@ -33,8 +33,8 @@
     "Foreach Loop": {
       "prefix": "fore",
       "body": [
-        "foreach (${1:dataset}, ${2:typeof item}) {",
-        "  ${3:// Body}",
+        "foreach (${2:mixed item} in ${1:mixed *array}) {",
+        "  ${0:// Body}",
         "}"
       ]
     }
@@ -64,12 +64,6 @@
         "  ${4:// Body}",
         "}"
       ]
-    }
-  },
-  {
-    "utf8_to_string": {
-      "prefix": "utf8_to_string",
-      "body": "utf8_to_string(${1:string str})"
     }
   },
   {
