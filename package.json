@@ -92,6 +92,10 @@
       {
         "language": "lpc",
         "path": "./snippets/lpc-parsing.json"
+      },
+      {
+        "language": "lpc",
+        "path": "./snippets/lpc-strings.json"
       }
 
     ]
