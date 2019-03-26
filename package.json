@@ -96,6 +96,10 @@
       {
         "language": "lpc",
         "path": "./snippets/lpc-strings.json"
+      },
+      {
+        "language": "lpc",
+        "path": "./snippets/lpc-mudlib.json"
       }
 
     ]
