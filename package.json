@@ -104,6 +104,10 @@
       {
         "language": "lpc",
         "path": "./snippets/lpc-objects.json"
+      },
+      {
+        "language": "lpc",
+        "path": "./snippets/lpc-system.json"
       }
 
     ]

@@ -1,0 +1,133 @@
+[{
+    "all_previous_objects": {
+      "prefix": "all_previous_objects",
+      "body": "all_previous_objects()"
+    }
+  },
+  {
+    "call_out_info": {
+      "prefix": "call_out_info",
+      "body": "call_out_info()"
+    }
+  },
+  {
+    "ctime": {
+      "prefix": "ctime",
+      "body": "ctime(${1:int clock})"
+    }
+  },
+  {
+    "deep_inherit_list": {
+      "prefix": "deep_inherit_list",
+      "body": "deep_inherit_list(${1:object obj})"
+    }
+  },
+  {
+    "error": {
+      "prefix": "error",
+      "body": "error(${1:string err})"
+    }
+  },
+  {
+    "errorp": {
+      "prefix": "errorp",
+      "body": "errorp(${1:mixed arg})"
+    }
+  },
+  {
+    "eval_cost": {
+      "prefix": "eval_cost",
+      "body": "eval_cost()"
+    }
+  },
+  {
+    "find_call_out": {
+      "prefix": "find_call_out",
+      "body": "find_call_out(${1:string func})"
+    }
+  },
+  {
+    "function_exists": {
+      "prefix": "function_exists",
+      "body": "function_exists(${1:string str}, ${2:object ob})"
+    }
+  },
+  {
+    "function_profile": {
+      "prefix": "function_profile",
+      "body": "function_profile(${1:object ob})"
+    }
+  },
+  {
+    "inherit_list": {
+      "prefix": "inherit_list",
+      "body": "inherit_list(${1:object obj})"
+    }
+  },
+  {
+    "inherits": {
+      "prefix": "inherits",
+      "body": "inherits(${1:string file}, ${2:object obj})"
+    }
+  },
+  {
+    "localtime": {
+      "prefix": "localtime",
+      "body": "localtime(${1:int time})"
+    }
+  },
+  {
+    "max_eval_cost": {
+      "prefix": "max_eval_cost",
+      "body": "max_eval_cost()"
+    }
+  },
+  {
+    "reclaim_objects": {
+      "prefix": "reclaim_objects",
+      "body": "reclaim_objects()"
+    }
+  },
+  {
+    "replace_program": {
+      "prefix": "replace_program",
+      "body": "replace_program()"
+    }
+  },
+  {
+    "reset_eval_cost": {
+      "prefix": "reset_eval_cost",
+      "body": "reset_eval_cost()"
+    }
+  },
+  {
+    "set_eval_limit": {
+      "prefix": "set_eval_limit",
+      "body": "set_eval_limit(${1:int cost})"
+    }
+  },
+  {
+    "set_reset": {
+      "prefix": "set_reset",
+      "body": "set_reset(${1:object obj}, ${2:int time})"
+    }
+  },
+  {
+    "shutdown": {
+      "prefix": "shutdown",
+      "body": "shutdown(${1:int how})"
+    }
+  },
+  {
+    "time": {
+      "prefix": "time",
+      "body": "time()"
+    }
+  },
+  {
+    "uptime": {
+      "prefix": "uptime",
+      "body": "uptime()"
+    }
+  }
+]
