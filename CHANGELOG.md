@@ -1,4 +1,7 @@
 # Change Log
+## v 0.2.1
+* Added icon and some metadata changes.
+
 ## v 0.2.0
 * Added more efun references.
 
