@@ -1,50 +1,34 @@
-[
-  {
+{
     "map": {
-      "prefix": "map",
-      "body": "map(${1:mapping|mixed*|string arr},${2:string fun},${3:object ob},${4:mixed extra},${5:...})"
-    }
-  },
-  {
+        "prefix": "map",
+        "body": "map(${1:mapping|mixed*|string arr},${2:string fun},${3:object ob},${4:mixed extra},${5:...})"
+    },
     "map_func": {
-      "prefix": "mapf",
-      "body": "map(${1:mapping|mixed*|string arr},${2:function func},${3:mixed extra},${4:...})"
-    }
-  },
-  {
+        "prefix": "mapf",
+        "body": "map(${1:mapping|mixed*|string arr},${2:function func},${3:mixed extra},${4:...})"
+    },
     "nullp": {
-      "prefix": "nullp",
-      "body": "nullp(${1:mixed arg})"
-    }
-  },
-  {
+        "prefix": "nullp",
+        "body": "nullp(${1:mixed arg})"
+    },
     "restore_variable": {
-      "prefix": "restore_variable",
-      "body": "restore_variable(${1:string value})"
-    }
-  },
-  {
+        "prefix": "restore_variable",
+        "body": "restore_variable(${1:string value})"
+    },
     "save_variable": {
-      "prefix": "save_variable",
-      "body": "save_variable(${1:mixed var})"
-    }
-  },
-  {
+        "prefix": "save_variable",
+        "body": "save_variable(${1:mixed var})"
+    },
     "sizeof": {
-      "prefix": "sizeof",
-      "body": "sizeof(${1:mixed var})"
-    }
-  },
-  {
+        "prefix": "sizeof",
+        "body": "sizeof(${1:mixed var})"
+    },
     "typeof": {
-      "prefix": "typeof",
-      "body": "typeof(${1:mixed var})"
-    }
-  },
-  {
+        "prefix": "typeof",
+        "body": "typeof(${1:mixed var})"
+    },
     "undefinedp": {
-      "prefix": "undefinedp",
-      "body": "undefinedp(${1:mixed arg})"
+        "prefix": "undefinedp",
+        "body": "undefinedp(${1:mixed arg})"
     }
-  }
-]
+}

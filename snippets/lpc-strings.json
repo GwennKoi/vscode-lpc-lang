@@ -1,127 +1,86 @@
-[{
+{
     "break_string": {
-      "prefix": "break_string",
-      "body": "break_string(${1:string str | int foobar}, ${2:int len}${3:, void|int indent | string indent })"
-    }
-  },
-  {
+        "prefix": "break_string",
+        "body": "break_string(${1:string str | int foobar}, ${2:int len}${3:, void|int indent | string indent })"
+    },
     "capitalize": {
-      "prefix": "capitalize",
-      "body": "capitalize(${1:string str})"
-    }
-  },
-  {
+        "prefix": "capitalize",
+        "body": "capitalize(${1:string str})"
+    },
     "clear_bit": {
-      "prefix": "clear_bit",
-      "body": "clear_bit(${1:string str}, ${2:int n} )"
-    }
-  },
-  {
+        "prefix": "clear_bit",
+        "body": "clear_bit(${1:string str}, ${2:int n} )"
+    },
     "crypt": {
-      "prefix": "crypt",
-      "body": "crypt(${1:string str}, ${2:string seed})"
-    }
-  },
-  {
+        "prefix": "crypt",
+        "body": "crypt(${1:string str}, ${2:string seed})"
+    },
     "explode": {
-      "prefix": "explode",
-      "body": "explode(${1:string str}, ${2:string del})"
-    }
-  },
-  {
+        "prefix": "explode",
+        "body": "explode(${1:string str}, ${2:string del})"
+    },
     "implode": {
-      "prefix": "implode",
-      "body": "implode(${1:mixed *arr},${2:string del})"
-    }
-  },
-  {
+        "prefix": "implode",
+        "body": "implode(${1:mixed *arr},${2:string del})"
+    },
     "lower_case": {
-      "prefix": "lower_case",
-      "body": "lower_case(${1:string str})"
-    }
-  },
-  {
+        "prefix": "lower_case",
+        "body": "lower_case(${1:string str})"
+    },
     "reg_assoc": {
-      "prefix": "reg_assoc",
-      "body": "reg_assoc(${1:string  str}, ${2:string *pat_arr}, ${3:mixed *tok_arr}${4:, void|mixed def})"
-    }
-  },
-  {
+        "prefix": "reg_assoc",
+        "body": "reg_assoc(${1:string  str}, ${2:string *pat_arr}, ${3:mixed *tok_arr}${4:, void|mixed def})"
+    },
     "regexp": {
-      "prefix": "regexp",
-      "body": "regexp(${1:string *lines}, ${2:string pattern}${3:, void|int flag})"
-    }
-  },
-  {
+        "prefix": "regexp",
+        "body": "regexp(${1:string *lines}, ${2:string pattern}${3:, void|int flag})"
+    },
     "replace_string": {
-      "prefix": "replace_string",
-      "body": "replace_string(${1:string str}, ${2:string pattern}, ${3:string replace})"
-    }
-  },
-  {
-    "replace_string": {
-      "prefix": "replace_string",
-      "body": "replace_string(${1:string str}, ${2:string pattern}, ${3:string replace}, ${4:int max})"
-    }
-  },
-  {
-    "replace_string": {
-      "prefix": "replace_string",
-      "body": "replace_string(${1:string str}, ${2:string pattern}, ${3:string replace}, ${4:int first}, ${5:int last})"
-    }
-  },
-  {
+        "prefix": "replace_string",
+        "body": "replace_string(${1:string str}, ${2:string pattern}, ${3:string replace})"
+    },
+    "replace_string_max": {
+        "prefix": "replace_string",
+        "body": "replace_string(${1:string str}, ${2:string pattern}, ${3:string replace}, ${4:int max})"
+    },
+    "replace_string_first_last": {
+        "prefix": "replace_string",
+        "body": "replace_string(${1:string str}, ${2:string pattern}, ${3:string replace}, ${4:int first}, ${5:int last})"
+    },
     "set_bit": {
-      "prefix": "set_bit",
-      "body": "set_bit(${1:string str}, ${2:int n})"
-    }
-  },
-  {
+        "prefix": "set_bit",
+        "body": "set_bit(${1:string str}, ${2:int n})"
+    },
     "printf": {
-      "prefix": "printf",
-      "body": "printf(${1:string formatting}${2,...})"
-    }
-  },
-  {
+        "prefix": "printf",
+        "body": "printf(${1:string formatting}${2,...})"
+    },
     "sprintf": {
-      "prefix": "sprintf",
-      "body": "sprintf(${1:string formatting}${2,...})"
-    }
-  },
-  {
+        "prefix": "sprintf",
+        "body": "sprintf(${1:string formatting}${2,...})"
+    },
     "sscanf ": {
-      "prefix": "sscanf",
-      "body": "sscanf(${1:string str}, ${2:string fmt}${3:, mixed var1...})"
-    }
-  },
-  {
+        "prefix": "sscanf",
+        "body": "sscanf(${1:string str}, ${2:string fmt}${3:, mixed var1...})"
+    },
     "strcmp": {
-      "prefix": "strcmp",
-      "body": "strcmp(${1:string one}, ${2:string two})"
-    }
-  },
-  {
+        "prefix": "strcmp",
+        "body": "strcmp(${1:string one}, ${2:string two})"
+    },
     "stringp": {
-      "prefix": "stringp",
-      "body": "stringp(${1:mixed arg})"
-    }
-  },
-  {
+        "prefix": "stringp",
+        "body": "stringp(${1:mixed arg})"
+    },
     "strlen": {
-      "prefix": "strlen",
-      "body": "strlen(${1:string str})"
-    }
-  },
-  {
+        "prefix": "strlen",
+        "body": "strlen(${1:string str})"
+    },
     "strsrch": {
-      "prefix": "strsrch",
-      "body": "strsrch(${1:string str}, ${2:string substr | int char}, ${3:int flag})"
-    }
-  },
-  {
+        "prefix": "strsrch",
+        "body": "strsrch(${1:string str}, ${2:string substr | int char}, ${3:int flag})"
+    },
     "test_bit": {
-      "prefix": "test_bit",
-      "body": "test_bit(${1:string str},${2:int n})"
+        "prefix": "test_bit",
+        "body": "test_bit(${1:string str},${2:int n})"
     }
-  }
-]
+}

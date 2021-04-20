@@ -1,86 +1,58 @@
-[
-  {
+{
     "cp": {
-      "prefix": "cp",
-      "body": "cp(${1:string src},${2:string dest})"
-    }
-  },
-  {
+        "prefix": "cp",
+        "body": "cp(${1:string src},${2:string dest})"
+    },
     "file_size": {
-      "prefix": "file_size",
-      "body": "file_size(${1:string filepath})"
-    }
-  },
-  {
+        "prefix": "file_size",
+        "body": "file_size(${1:string filepath})"
+    },
     "get_dir": {
-      "prefix": "get_dir",
-      "body": "get_dir(${1:string path},${2:int flag})"
-    }
-  },
-  {
+        "prefix": "get_dir",
+        "body": "get_dir(${1:string path},${2:int flag})"
+    },
     "link": {
-      "prefix": "link",
-      "body": "link(${1:string original_path},${2:string reference_path})"
-    }
-  },
-  {
+        "prefix": "link",
+        "body": "link(${1:string original_path},${2:string reference_path})"
+    },
     "mkdir": {
-      "prefix": "mkdir",
-      "body": "mkdir(${1:string directory_path})"
-    }
-  },
-  {
+        "prefix": "mkdir",
+        "body": "mkdir(${1:string directory_path})"
+    },
     "read_bytes": {
-      "prefix": "read_bytes",
-      "body": "read_bytes(${1:string path},${2:int start},${3:int length})"
-    }
-  },
-  {
+        "prefix": "read_bytes",
+        "body": "read_bytes(${1:string path},${2:int start},${3:int length})"
+    },
     "read_file": {
-      "prefix": "read_file",
-      "body": "read_file(${1:string file},${2:int start_line},${3:int number_of_lines} )"
-    }
-  },
-  {
+        "prefix": "read_file",
+        "body": "read_file(${1:string file},${2:int start_line},${3:int number_of_lines} )"
+    },
     "rename": {
-      "prefix": "rename",
-      "body": "rename(${1:string old_name},${2:string new_name})"
-    }
-  },
-  {
+        "prefix": "rename",
+        "body": "rename(${1:string old_name},${2:string new_name})"
+    },
     "rm": {
-      "prefix": "rm",
-      "body": "rm(${1:string file_path})"
-    }
-  },
-  {
+        "prefix": "rm",
+        "body": "rm(${1:string file_path})"
+    },
     "rmdir": {
-      "prefix": "rmdir",
-      "body": "rmdir(${1:string dir_path})"
-    }
-  },
-  {
+        "prefix": "rmdir",
+        "body": "rmdir(${1:string dir_path})"
+    },
     "stat": {
-      "prefix": "",
-      "body": "stat(${1:string file_path},${2:void|int flag} )"
-    }
-  },
-  {
+        "prefix": "",
+        "body": "stat(${1:string file_path},${2:void|int flag} )"
+    },
     "tail": {
-      "prefix": "tail",
-      "body": "tail(${1:string path})"
-    }
-  },
-  {
+        "prefix": "tail",
+        "body": "tail(${1:string path})"
+    },
     "write_bytes": {
-      "prefix": "write_bytes",
-      "body": "write_bytes(${1:string path},${2:int start},${3:string bytes})"
-    }
-  },
-  {
+        "prefix": "write_bytes",
+        "body": "write_bytes(${1:string path},${2:int start},${3:string bytes})"
+    },
     "write_file": {
-      "prefix": "write_file",
-      "body": "write_file(${1:string file},${2:string content},${3:int flag})"
+        "prefix": "write_file",
+        "body": "write_file(${1:string file},${2:string content},${3:int flag})"
     }
-  }
-]
+}
