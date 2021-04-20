@@ -1,98 +1,66 @@
-[
-  {
+{
     "author_stats": {
-      "prefix": "author_stats",
-      "body": "author_stats(${1:string domain | void})"
-    }
-  },
-  {
+        "prefix": "author_stats",
+        "body": "author_stats(${1:string domain | void})"
+    },
     "domain_stats": {
-      "prefix": "domain_stats",
-      "body": "domain_stats(${1:string domain | void})"
-    }
-  },
-  {
+        "prefix": "domain_stats",
+        "body": "domain_stats(${1:string domain | void})"
+    },
     "enable_wizard": {
-      "prefix": "enable_wizard",
-      "body": "enable_wizard()"
-    }
-  },
-  {
+        "prefix": "enable_wizard",
+        "body": "enable_wizard()"
+    },
     "export_uid": {
-      "prefix": "export_uid",
-      "body": "export_uid(${1:object ob})"
-    }
-  },
-  {
+        "prefix": "export_uid",
+        "body": "export_uid(${1:object ob})"
+    },
     "find_living": {
-      "prefix": "find_living",
-      "body": "find_living(${1:string str})"
-    }
-  },
-  {
+        "prefix": "find_living",
+        "body": "find_living(${1:string str})"
+    },
     "geteuid": {
-      "prefix": "geteuid",
-      "body": "geteuid(${1:object|function})"
-    }
-  },
-  {
+        "prefix": "geteuid",
+        "body": "geteuid(${1:object|function})"
+    },
     "getuid": {
-      "prefix": "getuid",
-      "body": "getuid(${1:object ob})"
-    }
-  },
-  {
+        "prefix": "getuid",
+        "body": "getuid(${1:object ob})"
+    },
     "living": {
-      "prefix": "living",
-      "body": "living(${1:object ob})"
-    }
-  },
-  {
+        "prefix": "living",
+        "body": "living(${1:object ob})"
+    },
     "livings": {
-      "prefix": "livings",
-      "body": "livings()"
-    }
-  },
-  {
+        "prefix": "livings",
+        "body": "livings()"
+    },
     "query_privs": {
-      "prefix": "query_privs",
-      "body": "query_privs(${1:object ob})"
-    }
-  },
-  {
+        "prefix": "query_privs",
+        "body": "query_privs(${1:object ob})"
+    },
     "set_author": {
-      "prefix": "set_author",
-      "body": "set_author(${1:string author})"
-    }
-  },
-  {
+        "prefix": "set_author",
+        "body": "set_author(${1:string author})"
+    },
     "set_light": {
-      "prefix": "set_light",
-      "body": "set_light(${1:int light_level_adjustment})"
-    }
-  },
-  {
+        "prefix": "set_light",
+        "body": "set_light(${1:int light_level_adjustment})"
+    },
     "set_living_name": {
-      "prefix": "set_living_name",
-      "body": "set_living_name(${1:string name})"
-    }
-  },
-  {
+        "prefix": "set_living_name",
+        "body": "set_living_name(${1:string name})"
+    },
     "set_privs": {
-      "prefix": "set_privs",
-      "body": "set_privs(${1:object ob}, ${2:string privs})"
-    }
-  },
-  {
+        "prefix": "set_privs",
+        "body": "set_privs(${1:object ob}, ${2:string privs})"
+    },
     "seteuid": {
-      "prefix": "seteuid",
-      "body": "seteuid(${1:string str})"
-    }
-  },
-  {
+        "prefix": "seteuid",
+        "body": "seteuid(${1:string str})"
+    },
     "wizardp": {
-      "prefix": "wizardp",
-      "body": "wizardp(${1:object player})"
+        "prefix": "wizardp",
+        "body": "wizardp(${1:object player})"
     }
-  }
-]
+}

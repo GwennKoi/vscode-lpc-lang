@@ -1,169 +1,118 @@
-[{
+{
     "all_inventory": {
-      "prefix": "all_inventory",
-      "body": "all_inventory(${1:object obj})"
-    }
-  },
-  {
+        "prefix": "all_inventory",
+        "body": "all_inventory(${1:object obj})"
+    },
     "children": {
-      "prefix": "children",
-      "body": "children(${1:string name})"
-    }
-  },
-  {
+        "prefix": "children",
+        "body": "children(${1:string name})"
+    },
     "clone_object": {
-      "prefix": "clone_object",
-      "body": "clone_object(${1:string name})"
-    }
-  },
-  {
+        "prefix": "clone_object",
+        "body": "clone_object(${1:string name})"
+    },
     "clonep": {
-      "prefix": "clonep",
-      "body": "clonep(${1:void|mixed arg})"
-    }
-  },
-  {
+        "prefix": "clonep",
+        "body": "clonep(${1:void|mixed arg})"
+    },
     "deep_inventory": {
-      "prefix": "deep_inventory",
-      "body": "deep_inventory(${1:object obj})"
-    }
-  },
-  {
+        "prefix": "deep_inventory",
+        "body": "deep_inventory(${1:object obj})"
+    },
     "destruct": {
-      "prefix": "destruct",
-      "body": "destruct(${1:object obj})"
-    }
-  },
-  {
+        "prefix": "destruct",
+        "body": "destruct(${1:object obj})"
+    },
     "environment": {
-      "prefix": "environment",
-      "body": "environment(${1:object obj})"
-    }
-  },
-  {
+        "prefix": "environment",
+        "body": "environment(${1:object obj})"
+    },
     "file_name": {
-      "prefix": "file_name",
-      "body": "file_name(${1:object obj})"
-    }
-  },
-  {
+        "prefix": "file_name",
+        "body": "file_name(${1:object obj})"
+    },
     "find_object": {
-      "prefix": "find_object",
-      "body": "find_object(${1:string filename})"
-    }
-  },
-  {
+        "prefix": "find_object",
+        "body": "find_object(${1:string filename})"
+    },
     "first_inventory": {
-      "prefix": "first_inventory",
-      "body": "first_inventory(${1:mixed obj})"
-    }
-  },
-  {
+        "prefix": "first_inventory",
+        "body": "first_inventory(${1:mixed obj})"
+    },
     "load_object": {
-      "prefix": "load_object",
-      "body": "load_object(${1:string filename})"
-    }
-  },
-  {
+        "prefix": "load_object",
+        "body": "load_object(${1:string filename})"
+    },
     "master ": {
-      "prefix": "master",
-      "body": "master()"
-    }
-  },
-  {
+        "prefix": "master",
+        "body": "master()"
+    },
     "move_object": {
-      "prefix": "move_object",
-      "body": "move_object(${1:object item}, ${2:mixed dest})"
-    }
-  },
-  {
+        "prefix": "move_object",
+        "body": "move_object(${1:object item}, ${2:mixed dest})"
+    },
     "new": {
-      "prefix": "new",
-      "body": "new(${1:string name})"
-    }
-  },
-  {
+        "prefix": "new",
+        "body": "new(${1:string name})"
+    },
     "next_inventory": {
-      "prefix": "next_inventory",
-      "body": "next_inventory(${1:object ob})"
-    }
-  },
-  {
+        "prefix": "next_inventory",
+        "body": "next_inventory(${1:object ob})"
+    },
     "objectp": {
-      "prefix": "objectp",
-      "body": "objectp(${1:mixed arg})"
-    }
-  },
-  {
-    "objects": {
-      "prefix": "objects",
-      "body": "objects(${1:string func}, ${2:object ob})"
-    }
-  },
-  {
-    "objects": {
-      "prefix": "objects",
-      "body": "objects( (: ${1:/*function*/ }:) )"
-    }
-  },
-  {
+        "prefix": "objectp",
+        "body": "objectp(${1:mixed arg})"
+    },
+    "objects" : {
+        "prefix" : "objects",
+        "body" : "objects()"
+    },
+    "objects_string_filter": {
+        "prefix": "objects",
+        "body": "objects(${1:string func}, ${2:object ob})"
+    },
+    "objects_function_filter": {
+        "prefix": "objects",
+        "body": "objects( (: ${1:/*function*/ }:) )"
+    },
     "present": {
-      "prefix": "present",
-      "body": "present(${1:mixed str}, ${2:object obj})"
-    }
-  },
-  {
+        "prefix": "present",
+        "body": "present(${1:mixed str}, ${2:object obj})"
+    },
     "query_heart_beat": {
-      "prefix": "query_heart_beat",
-      "body": "query_heart_beat(${1:object obj})"
-    }
-  },
-  {
+        "prefix": "query_heart_beat",
+        "body": "query_heart_beat(${1:object obj})"
+    },
     "reload_object": {
-      "prefix": "reload_object",
-      "body": "reload_object(${1:object obj})"
-    }
-  },
-  {
+        "prefix": "reload_object",
+        "body": "reload_object(${1:object obj})"
+    },
     "restore_object": {
-      "prefix": "restore_object",
-      "body": "restore_object(${1:string name}${2:, int flag})"
-    }
-  },
-  {
+        "prefix": "restore_object",
+        "body": "restore_object(${1:string name}${2:, int flag})"
+    },
     "save_object": {
-      "prefix": "save_object",
-      "body": "save_object(${1:string name}${2:, int flag})"
-    }
-  },
-  {
+        "prefix": "save_object",
+        "body": "save_object(${1:string name}${2:, int flag})"
+    },
     "set_heart_beat": {
-      "prefix": "set_heart_beat",
-      "body": "set_heart_beat(${1:int flag})"
-    }
-  },
-  {
+        "prefix": "set_heart_beat",
+        "body": "set_heart_beat(${1:int flag})"
+    },
     "set_hide": {
-      "prefix": "set_hide",
-      "body": "set_hide(${1:int flag})"
-    }
-  },
-  {
+        "prefix": "set_hide",
+        "body": "set_hide(${1:int flag})"
+    },
     "tell_object": {
-      "prefix": "tell_object",
-      "body": "tell_object(${1:object obj}, ${2:string str})"
-    }
-  },
-  {
+        "prefix": "tell_object",
+        "body": "tell_object(${1:object obj}, ${2:string str})"
+    },
     "tell_room": {
-      "prefix": "tell_room",
-      "body": "tell_object(${1:object obj}, ${2:string str})"
-    }
-  },
-  {
+        "prefix": "tell_room",
+        "body": "tell_object(${1:object obj}, ${2:string str})"
+    },
     "virtualp": {
-      "prefix": "virtualp",
-      "body": "virtualp(${1:object arg})"
+        "prefix": "virtualp",
+        "body": "virtualp(${1:object arg})"
     }
-  }
-]
+}

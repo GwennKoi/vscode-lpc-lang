@@ -1,80 +1,54 @@
-[
-  {
+{
     "allocate_mapping": {
-      "prefix": "allocate_mapping",
-      "body": "allocate_mapping(${1:int size})"
-    }
-  },
-  {
+        "prefix": "allocate_mapping",
+        "body": "allocate_mapping(${1:int size})"
+    },
     "each": {
-      "prefix": "each",
-      "body": "each(${1:mapping m}${2:, int reset})"
-    }
-  },
-  {
+        "prefix": "each",
+        "body": "each(${1:mapping m}${2:, int reset})"
+    },
     "filter_map_string": {
-      "prefix": "filter_map_str",
-      "body": "filter_mapping(${1:mapping m}, ${2:string func}, ${3:object ob}${4:, mixed extra...})"
-    }
-  },
-  {
+        "prefix": "filter_map_str",
+        "body": "filter_mapping(${1:mapping m}, ${2:string func}, ${3:object ob}${4:, mixed extra...})"
+    },
     "filter_map_func": {
-      "prefix": "filter_map_func",
-      "body": "filter_mapping(${1:mapping m}, (: ${2:/*function*/ } :)${3:, mixed extra...})"
-    }
-  },
-  {
+        "prefix": "filter_map_func",
+        "body": "filter_mapping(${1:mapping m}, (: ${2:/*function*/ } :)${3:, mixed extra...})"
+    },
     "keys": {
-      "prefix": "keys",
-      "body": "keys(${1:mapping m})"
-    }
-  },
-  {
+        "prefix": "keys",
+        "body": "keys(${1:mapping m})"
+    },
     "map_delete": {
-      "prefix": "mapdel",
-      "body": "map_delete(${1:mapping m}, ${2:mixed element})"
-    }
-  },
-  {
-    "map_mapping": {
-      "prefix": "mmaps",
-      "body": "map_mapping(${1:mapping m}, ${2:string func}, ${3:object ob}${4:, mixed extra...})"
-    }
-  },
-  {
-    "map_mapping": {
-      "prefix": "mmapf",
-      "body": "map_mapping(${1:mapping m}, (:${2:/*function*/ }:)${3:, mixed extra...})"
-    }
-  },
-  {
+        "prefix": "mapdel",
+        "body": "map_delete(${1:mapping m}, ${2:mixed element})"
+    },
+    "map_mapping_string": {
+        "prefix": "mmaps",
+        "body": "map_mapping(${1:mapping m}, ${2:string func}, ${3:object ob}${4:, mixed extra...})"
+    },
+    "map_mapping_function": {
+        "prefix": "mmapf",
+        "body": "map_mapping(${1:mapping m}, (:${2:/*function*/ }:)${3:, mixed extra...})"
+    },
     "mapp": {
-      "prefix": "mapp",
-      "body": "mapp(${1:mixed arg})"
-    }
-  },
-  {
+        "prefix": "mapp",
+        "body": "mapp(${1:mixed arg})"
+    },
     "match_path": {
-      "prefix": "match_path",
-      "body": "match_path(${1:mapping m}, ${2:string path})"
-    }
-  },
-  {
-    "unique_mapping": {
-      "prefix": "unique_mapping_string",
-      "body": "unique_mapping(${1:mixed *arr}, ${2:string func}, ${3:object ob}${4:, mixed extra...})"
-    }
-  },
-  {
-    "unique_mapping": {
-      "prefix": "unique_mapping_map",
-      "body": "unique_mapping(${1:mixed *arr}, (:${2: /*function*/ }:)${3:, mixed extra...})"
-    }
-  },
-  {
+        "prefix": "match_path",
+        "body": "match_path(${1:mapping m}, ${2:string path})"
+    },
+    "unique_mapping_string": {
+        "prefix": "unique_mapping_string",
+        "body": "unique_mapping(${1:mixed *arr}, ${2:string func}, ${3:object ob}${4:, mixed extra...})"
+    },
+    "unique_mapping_function": {
+        "prefix": "unique_mapping_map",
+        "body": "unique_mapping(${1:mixed *arr}, (:${2: /*function*/ }:)${3:, mixed extra...})"
+    },
     "values": {
-      "prefix": "values",
-      "body": "values(${1:mapping m})"
+        "prefix": "values",
+        "body": "values(${1:mapping m})"
     }
-  }
-]
+}
