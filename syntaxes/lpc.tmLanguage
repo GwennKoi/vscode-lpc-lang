@@ -6,7 +6,7 @@
 		<array>
 			<string>c</string>
 			<string>h</string>
-    </array>
+		</array>
 		<key>firstLineMatch</key>
 		<string>(-[*]-( [Mm]ode:)? [Ll][Pp][Cc] -[*]-|^#!/.*\blpc\b)</string>
 		<key>foldingStartMarker</key>
@@ -26,51 +26,51 @@
 			<dict>
 				<key>include</key>
 				<string>#preprocessor-rule-enabled</string>
-      </dict>
+			</dict>
 			<dict>
 				<key>include</key>
 				<string>#preprocessor-rule-enabled-block</string>
-      </dict>
+			</dict>
 			<dict>
 				<key>include</key>
 				<string>#preprocessor-rule-disabled</string>
-      </dict>
+			</dict>
 			<dict>
 				<key>include</key>
 				<string>#preprocessor-rule-disabled-block</string>
-      </dict>
+			</dict>
 			<dict>
 				<key>include</key>
 				<string>#preprocessor-rule-other</string>
-      </dict>
+			</dict>
 			<dict>
 				<key>include</key>
 				<string>#preprocessor-rule-other-block</string>
-      </dict>
+			</dict>
 			<dict>
 				<key>include</key>
 				<string>#disabled</string>
-      </dict>
+			</dict>
 			<dict>
 				<key>include</key>
 				<string>#parens</string>
-      </dict>
+			</dict>
 			<dict>
 				<key>include</key>
 				<string>#comments</string>
-      </dict>
+			</dict>
 			<dict>
 				<key>include</key>
 				<string>#pragma-mark</string>
-      </dict>
+			</dict>
 			<dict>
 				<key>include</key>
 				<string>#fncall</string>
-      </dict>
+			</dict>
 			<dict>
 				<key>include</key>
 				<string>#block</string>
-      </dict>
+			</dict>
 			<dict>
 				<key>comment</key>
 				<string>Control flow keywords</string>
@@ -78,21 +78,21 @@
 				<string>\b(if|else|while|for|foreach|do|return|continue|break|switch|case|default|catch|inherit)\b</string>
 				<key>name</key>
 				<string>keyword.control.lpc</string>
-      </dict>
+			</dict>
 			<dict>
 				<key>match</key>
 				<string>\b(float|int|void|object|class|mapping|string|mixed|function)\b</string>
 				<key>name</key>
 				<string>storage.type.lpc</string>
-      </dict>
+			</dict>
 			<dict>
 				<key>comment</key>
 				<string>Modifiers</string>
 				<key>match</key>
-				<string>\b(public|private)\b</string>
+				<string>\b(public|private|protected|nosave|nomask)\b</string>
 				<key>name</key>
 				<string>storage.modifier.lpc</string>
-      </dict>
+			</dict>
 			<dict>
 				<key>comment</key>
 				<string>Numeric values</string>
@@ -100,7 +100,7 @@
 				<string>(?:\b|(?&lt;!\.)(?=\.))((0(x|X)[0-9a-fA-F]*)|(0(b|B)[01]+)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)\b</string>
 				<key>name</key>
 				<string>constant.numeric.lpc</string>
-      </dict>
+			</dict>
 			<dict>
 				<key>comment</key>
 				<string>Language constants</string>
@@ -108,7 +108,7 @@
 				<string>\b(true|false)\b</string>
 				<key>name</key>
 				<string>constant.language.lpc</string>
-      </dict>
+			</dict>
 			<dict>
 				<key>begin</key>
 				<string>"</string>
@@ -118,8 +118,8 @@
 					<dict>
 						<key>name</key>
 						<string>punctuation.definition.string.begin.lpc</string>
-          </dict>
-        </dict>
+					</dict>
+				</dict>
 				<key>end</key>
 				<string>"</string>
 				<key>endCaptures</key>
@@ -128,8 +128,8 @@
 					<dict>
 						<key>name</key>
 						<string>punctuation.definition.string.end.lpc</string>
-          </dict>
-        </dict>
+					</dict>
+				</dict>
 				<key>name</key>
 				<string>string.quoted.double.lpc</string>
 				<key>patterns</key>
@@ -137,13 +137,13 @@
 					<dict>
 						<key>include</key>
 						<string>#string_escaped_char</string>
-          </dict>
+					</dict>
 					<dict>
 						<key>include</key>
 						<string>#string_placeholder</string>
-          </dict>
-        </array>
-      </dict>
+					</dict>
+				</array>
+			</dict>
 			<dict>
 				<key>comment</key>
 				<string>Multiline string literal</string>
@@ -167,8 +167,8 @@
 					<dict>
 						<key>name</key>
 						<string>punctuation.definition.string.begin.lpc</string>
-          </dict>
-        </dict>
+					</dict>
+				</dict>
 				<key>end</key>
 				<string>'</string>
 				<key>endCaptures</key>
@@ -177,8 +177,8 @@
 					<dict>
 						<key>name</key>
 						<string>punctuation.definition.string.end.lpc</string>
-          </dict>
-        </dict>
+					</dict>
+				</dict>
 				<key>name</key>
 				<string>string.quoted.single.lpc</string>
 				<key>patterns</key>
@@ -186,9 +186,9 @@
 					<dict>
 						<key>include</key>
 						<string>#string_escaped_char</string>
-          </dict>
-        </array>
-      </dict>
+					</dict>
+				</array>
+			</dict>
 			<dict>
 				<key>begin</key>
 				<string>(?x)
@@ -209,33 +209,33 @@
 					<dict>
 						<key>name</key>
 						<string>keyword.control.import.define.lpc</string>
-          </dict>
+					</dict>
 					<key>2</key>
 					<dict>
 						<key>name</key>
 						<string>entity.name.function.preprocessor.lpc</string>
-          </dict>
+					</dict>
 					<key>4</key>
 					<dict>
 						<key>name</key>
 						<string>punctuation.definition.parameters.lpc</string>
-          </dict>
+					</dict>
 					<key>5</key>
 					<dict>
 						<key>name</key>
 						<string>variable.parameter.preprocessor.lpc</string>
-          </dict>
+					</dict>
 					<key>7</key>
 					<dict>
 						<key>name</key>
 						<string>punctuation.separator.parameters.lpc</string>
-          </dict>
+					</dict>
 					<key>8</key>
 					<dict>
 						<key>name</key>
 						<string>punctuation.definition.parameters.lpc</string>
-          </dict>
-        </dict>
+					</dict>
+				</dict>
 				<key>end</key>
 				<string>(?=(?://|/\*))|$|\n</string>
 				<key>name</key>
@@ -247,13 +247,13 @@
 						<string>(?&gt;\\\s*\n)</string>
 						<key>name</key>
 						<string>punctuation.separator.continuation.lpc</string>
-          </dict>
+					</dict>
 					<dict>
 						<key>include</key>
 						<string>$base</string>
-          </dict>
-        </array>
-      </dict>
+					</dict>
+				</array>
+			</dict>
 			<dict>
 				<key>begin</key>
 				<string>^\s*#\s*(include)\b</string>
@@ -263,8 +263,8 @@
 					<dict>
 						<key>name</key>
 						<string>keyword.control.import.include.lpc</string>
-          </dict>
-        </dict>
+					</dict>
+				</dict>
 				<key>end</key>
 				<string>(?=(?://|/\*))|$</string>
 				<key>name</key>
@@ -276,7 +276,7 @@
 						<string>(?&gt;\\\s*\n)</string>
 						<key>name</key>
 						<string>punctuation.separator.continuation.lpc</string>
-          </dict>
+					</dict>
 					<dict>
 						<key>begin</key>
 						<string>\"</string>
@@ -286,8 +286,8 @@
 							<dict>
 								<key>name</key>
 								<string>punctuation.definition.string.begin.lpc</string>
-              </dict>
-            </dict>
+							</dict>
+						</dict>
 						<key>end</key>
 						<string>\"</string>
 						<key>endCaptures</key>
@@ -296,11 +296,11 @@
 							<dict>
 								<key>name</key>
 								<string>punctuation.definition.string.end.lpc</string>
-              </dict>
-            </dict>
+							</dict>
+						</dict>
 						<key>name</key>
 						<string>string.quoted.double.include.lpc</string>
-          </dict>
+					</dict>
 					<dict>
 						<key>begin</key>
 						<string>&lt;</string>
@@ -310,8 +310,8 @@
 							<dict>
 								<key>name</key>
 								<string>punctuation.definition.string.begin.lpc</string>
-              </dict>
-            </dict>
+							</dict>
+						</dict>
 						<key>end</key>
 						<string>&gt;</string>
 						<key>endCaptures</key>
@@ -320,13 +320,13 @@
 							<dict>
 								<key>name</key>
 								<string>punctuation.definition.string.end.lpc</string>
-              </dict>
-            </dict>
+							</dict>
+						</dict>
 						<key>name</key>
 						<string>string.quoted.other.lt-gt.include.lpc</string>
-          </dict>
-        </array>
-      </dict>
+					</dict>
+				</array>
+			</dict>
 			<dict>
 				<key>begin</key>
 				<string>^\s*#\s*(define|echo|elif|else|if|ifdef|ifndef|pragma|undef|endif)\b</string>
@@ -336,8 +336,8 @@
 					<dict>
 						<key>name</key>
 						<string>keyword.control.import.lpc</string>
-          </dict>
-        </dict>
+					</dict>
+				</dict>
 				<key>end</key>
 				<string>(?=(?://|/\*))|$</string>
 				<key>name</key>
@@ -349,9 +349,9 @@
 						<string>(?&gt;\\\s*\n)</string>
 						<key>name</key>
 						<string>punctuation.separator.continuation.lpc</string>
-          </dict>
-        </array>
-      </dict>
+					</dict>
+				</array>
+			</dict>
 			<dict>
 				<key>begin</key>
 				<string>(?x)(?:^|(?:(?=\s)(?&lt;!else|return)(?&lt;=\w)|(?=\s*[[:alnum:]_.|\(\)])))(\s*)(?!\b(while|for|do|if|else|switch|catch|return|foreach|object|int|float|function|mapping|string|mixed|class)\b\s*)((?:`\(\)|`[-&lt;.&gt;^|&amp;*~/+%=!\[\]]+|`[[:alpha:]_][[:alnum:]_]*+|[[:alpha:]_][[:alnum:]_]*+)++)\s*(?=\()</string>
@@ -361,18 +361,18 @@
 					<dict>
 						<key>name</key>
 						<string>punctuation.whitespace.function.leading.lpc</string>
-          </dict>
+					</dict>
 					<key>3</key>
 					<dict>
 						<key>name</key>
 						<string>entity.name.function.lpc</string>
-          </dict>
+					</dict>
 					<key>4</key>
 					<dict>
 						<key>name</key>
 						<string>punctuation.definition.parameters.lpc</string>
-          </dict>
-        </dict>
+					</dict>
+				</dict>
 				<key>end</key>
 				<string>(?&lt;=\})|(?=#)|(;)</string>
 				<key>name</key>
@@ -382,24 +382,24 @@
 					<dict>
 						<key>include</key>
 						<string>#comments</string>
-          </dict>
+					</dict>
 					<dict>
 						<key>include</key>
 						<string>#parens</string>
-          </dict>
+					</dict>
 					<dict>
 						<key>match</key>
 						<string>\bconstant\b</string>
 						<key>name</key>
 						<string>storage.modifier.lpc</string>
-          </dict>
+					</dict>
 					<dict>
 						<key>include</key>
 						<string>#block</string>
-          </dict>
-        </array>
-      </dict>
-    </array>
+					</dict>
+				</array>
+			</dict>
+		</array>
 		<key>repository</key>
 		<dict>
 			<key>block</key>
@@ -415,9 +415,9 @@
 					<dict>
 						<key>include</key>
 						<string>#block_innards</string>
-          </dict>
-        </array>
-      </dict>
+					</dict>
+				</array>
+			</dict>
 			<key>block_innards</key>
 			<dict>
 				<key>patterns</key>
@@ -425,17 +425,17 @@
 					<dict>
 						<key>include</key>
 						<string>#fncall</string>
-          </dict>
+					</dict>
 					<dict>
 						<key>include</key>
 						<string>#block</string>
-          </dict>
+					</dict>
 					<dict>
 						<key>include</key>
 						<string>$base</string>
-          </dict>
-        </array>
-      </dict>
+					</dict>
+				</array>
+			</dict>
 			<key>comments</key>
 			<dict>
 				<key>patterns</key>
@@ -449,13 +449,13 @@
 							<dict>
 								<key>name</key>
 								<string>punctuation.definition.comment.lpc</string>
-              </dict>
-            </dict>
+							</dict>
+						</dict>
 						<key>end</key>
 						<string>\*/</string>
 						<key>name</key>
 						<string>comment.block.lpc</string>
-          </dict>
+					</dict>
 					<dict>
 						<key>captures</key>
 						<dict>
@@ -463,15 +463,15 @@
 							<dict>
 								<key>name</key>
 								<string>punctuation.definition.comment.lpc</string>
-              </dict>
-            </dict>
+							</dict>
+						</dict>
 						<key>match</key>
 						<string>(//).*$\n?</string>
 						<key>name</key>
 						<string>comment.line.double-slash.lpc</string>
-          </dict>
-        </array>
-      </dict>
+					</dict>
+				</array>
+			</dict>
 			<key>disabled</key>
 			<dict>
 				<key>begin</key>
@@ -485,13 +485,13 @@
 					<dict>
 						<key>include</key>
 						<string>#disabled</string>
-          </dict>
+					</dict>
 					<dict>
 						<key>include</key>
 						<string>#pragma-mark</string>
-          </dict>
-        </array>
-      </dict>
+					</dict>
+				</array>
+			</dict>
 			<key>fncall</key>
 			<dict>
 				<key>patterns</key>
@@ -503,18 +503,18 @@
 							<dict>
 								<key>name</key>
 								<string>punctuation.whitespace.function-call.leading.lpc</string>
-              </dict>
+							</dict>
 							<key>2</key>
 							<dict>
 								<key>name</key>
 								<string>support.function.any-method.lpc</string>
-              </dict>
+							</dict>
 							<key>3</key>
 							<dict>
 								<key>name</key>
 								<string>punctuation.definition.parameters.lpc</string>
-              </dict>
-            </dict>
+							</dict>
+						</dict>
 						<key>match</key>
 						<string>(?x)
                      (?: (?= \s )  (?:(?&lt;=else|new|return) | (?&lt;!\w)) (\s+))?
@@ -532,13 +532,13 @@
                      \s*(\()</string>
 						<key>name</key>
 						<string>meta.function-call.lpc</string>
-          </dict>
+					</dict>
 					<dict>
 						<key>include</key>
 						<string>#block</string>
-          </dict>
-        </array>
-      </dict>
+					</dict>
+				</array>
+			</dict>
 			<key>parens</key>
 			<dict>
 				<key>begin</key>
@@ -552,9 +552,9 @@
 					<dict>
 						<key>include</key>
 						<string>$base</string>
-          </dict>
-        </array>
-      </dict>
+					</dict>
+				</array>
+			</dict>
 			<key>pragma-mark</key>
 			<dict>
 				<key>captures</key>
@@ -563,23 +563,23 @@
 					<dict>
 						<key>name</key>
 						<string>meta.preprocessor.lpc</string>
-          </dict>
+					</dict>
 					<key>2</key>
 					<dict>
 						<key>name</key>
 						<string>keyword.control.import.pragma.lpc</string>
-          </dict>
+					</dict>
 					<key>3</key>
 					<dict>
 						<key>name</key>
 						<string>meta.toc-list.pragma-mark.lpc</string>
-          </dict>
-        </dict>
+					</dict>
+				</dict>
 				<key>match</key>
 				<string>^\s*(#\s*(pragma\s+mark)\s+(.*))</string>
 				<key>name</key>
 				<string>meta.section</string>
-      </dict>
+			</dict>
 			<key>preprocessor-rule-disabled</key>
 			<dict>
 				<key>begin</key>
@@ -590,18 +590,18 @@
 					<dict>
 						<key>name</key>
 						<string>meta.preprocessor.lpc</string>
-          </dict>
+					</dict>
 					<key>2</key>
 					<dict>
 						<key>name</key>
 						<string>keyword.control.import.if.lpc</string>
-          </dict>
+					</dict>
 					<key>3</key>
 					<dict>
 						<key>name</key>
 						<string>constant.numeric.preprocessor.lpc</string>
-          </dict>
-        </dict>
+					</dict>
+				</dict>
 				<key>end</key>
 				<string>^\s*(#\s*(endif)\b)</string>
 				<key>patterns</key>
@@ -615,13 +615,13 @@
 							<dict>
 								<key>name</key>
 								<string>meta.preprocessor.lpc</string>
-              </dict>
+							</dict>
 							<key>2</key>
 							<dict>
 								<key>name</key>
 								<string>keyword.control.import.else.lpc</string>
-              </dict>
-            </dict>
+							</dict>
+						</dict>
 						<key>end</key>
 						<string>(?=^\s*#\s*endif\b.*$)</string>
 						<key>patterns</key>
@@ -629,9 +629,9 @@
 							<dict>
 								<key>include</key>
 								<string>$base</string>
-              </dict>
-            </array>
-          </dict>
+							</dict>
+						</array>
+					</dict>
 					<dict>
 						<key>begin</key>
 						<string></string>
@@ -644,15 +644,15 @@
 							<dict>
 								<key>include</key>
 								<string>#disabled</string>
-              </dict>
+							</dict>
 							<dict>
 								<key>include</key>
 								<string>#pragma-mark</string>
-              </dict>
-            </array>
-          </dict>
-        </array>
-      </dict>
+							</dict>
+						</array>
+					</dict>
+				</array>
+			</dict>
 			<key>preprocessor-rule-disabled-block</key>
 			<dict>
 				<key>begin</key>
@@ -663,18 +663,18 @@
 					<dict>
 						<key>name</key>
 						<string>meta.preprocessor.lpc</string>
-          </dict>
+					</dict>
 					<key>2</key>
 					<dict>
 						<key>name</key>
 						<string>keyword.control.import.if.lpc</string>
-          </dict>
+					</dict>
 					<key>3</key>
 					<dict>
 						<key>name</key>
 						<string>constant.numeric.preprocessor.lpc</string>
-          </dict>
-        </dict>
+					</dict>
+				</dict>
 				<key>end</key>
 				<string>^\s*(#\s*(endif)\b)</string>
 				<key>patterns</key>
@@ -688,13 +688,13 @@
 							<dict>
 								<key>name</key>
 								<string>meta.preprocessor.lpc</string>
-              </dict>
+							</dict>
 							<key>2</key>
 							<dict>
 								<key>name</key>
 								<string>keyword.control.import.else.lpc</string>
-              </dict>
-            </dict>
+							</dict>
+						</dict>
 						<key>end</key>
 						<string>(?=^\s*#\s*endif\b.*$)</string>
 						<key>patterns</key>
@@ -702,9 +702,9 @@
 							<dict>
 								<key>include</key>
 								<string>#block_innards</string>
-              </dict>
-            </array>
-          </dict>
+							</dict>
+						</array>
+					</dict>
 					<dict>
 						<key>begin</key>
 						<string></string>
@@ -717,15 +717,15 @@
 							<dict>
 								<key>include</key>
 								<string>#disabled</string>
-              </dict>
+							</dict>
 							<dict>
 								<key>include</key>
 								<string>#pragma-mark</string>
-              </dict>
-            </array>
-          </dict>
-        </array>
-      </dict>
+							</dict>
+						</array>
+					</dict>
+				</array>
+			</dict>
 			<key>preprocessor-rule-enabled</key>
 			<dict>
 				<key>begin</key>
@@ -736,18 +736,18 @@
 					<dict>
 						<key>name</key>
 						<string>meta.preprocessor.lpc</string>
-          </dict>
+					</dict>
 					<key>2</key>
 					<dict>
 						<key>name</key>
 						<string>keyword.control.import.if.lpc</string>
-          </dict>
+					</dict>
 					<key>3</key>
 					<dict>
 						<key>name</key>
 						<string>constant.numeric.preprocessor.lpc</string>
-          </dict>
-        </dict>
+					</dict>
+				</dict>
 				<key>end</key>
 				<string>^\s*(#\s*(endif)\b)</string>
 				<key>patterns</key>
@@ -761,13 +761,13 @@
 							<dict>
 								<key>name</key>
 								<string>meta.preprocessor.lpc</string>
-              </dict>
+							</dict>
 							<key>2</key>
 							<dict>
 								<key>name</key>
 								<string>keyword.control.import.else.lpc</string>
-              </dict>
-            </dict>
+							</dict>
+						</dict>
 						<key>contentName</key>
 						<string>comment.block.preprocessor.else-branch</string>
 						<key>end</key>
@@ -777,13 +777,13 @@
 							<dict>
 								<key>include</key>
 								<string>#disabled</string>
-              </dict>
+							</dict>
 							<dict>
 								<key>include</key>
 								<string>#pragma-mark</string>
-              </dict>
-            </array>
-          </dict>
+							</dict>
+						</array>
+					</dict>
 					<dict>
 						<key>begin</key>
 						<string></string>
@@ -794,11 +794,11 @@
 							<dict>
 								<key>include</key>
 								<string>$base</string>
-              </dict>
-            </array>
-          </dict>
-        </array>
-      </dict>
+							</dict>
+						</array>
+					</dict>
+				</array>
+			</dict>
 			<key>preprocessor-rule-enabled-block</key>
 			<dict>
 				<key>begin</key>
@@ -809,18 +809,18 @@
 					<dict>
 						<key>name</key>
 						<string>meta.preprocessor.lpc</string>
-          </dict>
+					</dict>
 					<key>2</key>
 					<dict>
 						<key>name</key>
 						<string>keyword.control.import.if.lpc</string>
-          </dict>
+					</dict>
 					<key>3</key>
 					<dict>
 						<key>name</key>
 						<string>constant.numeric.preprocessor.lpc</string>
-          </dict>
-        </dict>
+					</dict>
+				</dict>
 				<key>end</key>
 				<string>^\s*(#\s*(endif)\b)</string>
 				<key>patterns</key>
@@ -834,13 +834,13 @@
 							<dict>
 								<key>name</key>
 								<string>meta.preprocessor.lpc</string>
-              </dict>
+							</dict>
 							<key>2</key>
 							<dict>
 								<key>name</key>
 								<string>keyword.control.import.else.lpc</string>
-              </dict>
-            </dict>
+							</dict>
+						</dict>
 						<key>contentName</key>
 						<string>comment.block.preprocessor.else-branch.in-block</string>
 						<key>end</key>
@@ -850,13 +850,13 @@
 							<dict>
 								<key>include</key>
 								<string>#disabled</string>
-              </dict>
+							</dict>
 							<dict>
 								<key>include</key>
 								<string>#pragma-mark</string>
-              </dict>
-            </array>
-          </dict>
+							</dict>
+						</array>
+					</dict>
 					<dict>
 						<key>begin</key>
 						<string></string>
@@ -867,11 +867,11 @@
 							<dict>
 								<key>include</key>
 								<string>#block_innards</string>
-              </dict>
-            </array>
-          </dict>
-        </array>
-      </dict>
+							</dict>
+						</array>
+					</dict>
+				</array>
+			</dict>
 			<key>preprocessor-rule-other</key>
 			<dict>
 				<key>begin</key>
@@ -882,13 +882,13 @@
 					<dict>
 						<key>name</key>
 						<string>meta.preprocessor.lpc</string>
-          </dict>
+					</dict>
 					<key>2</key>
 					<dict>
 						<key>name</key>
 						<string>keyword.control.import.lpc</string>
-          </dict>
-        </dict>
+					</dict>
+				</dict>
 				<key>end</key>
 				<string>^\s*(#\s*(endif)\b).*$</string>
 				<key>patterns</key>
@@ -896,9 +896,9 @@
 					<dict>
 						<key>include</key>
 						<string>$base</string>
-          </dict>
-        </array>
-      </dict>
+					</dict>
+				</array>
+			</dict>
 			<key>preprocessor-rule-other-block</key>
 			<dict>
 				<key>begin</key>
@@ -909,13 +909,13 @@
 					<dict>
 						<key>name</key>
 						<string>meta.preprocessor.lpc</string>
-          </dict>
+					</dict>
 					<key>2</key>
 					<dict>
 						<key>name</key>
 						<string>keyword.control.import.lpc</string>
-          </dict>
-        </dict>
+					</dict>
+				</dict>
 				<key>end</key>
 				<string>^\s*(#\s*(endif)\b).*$</string>
 				<key>patterns</key>
@@ -923,9 +923,9 @@
 					<dict>
 						<key>include</key>
 						<string>#block_innards</string>
-          </dict>
-        </array>
-      </dict>
+					</dict>
+				</array>
+			</dict>
 			<key>string_escaped_char</key>
 			<dict>
 				<key>patterns</key>
@@ -935,15 +935,15 @@
 						<string>\\(\\|[0-3]\d{,2}|[4-7]\d?|x[a-fA-F0-9]{,2}|u[a-fA-F0-9]{,4}|U[a-fA-F0-9]{,8}|d[0-9]+|[[:alnum:]'"?])</string>
 						<key>name</key>
 						<string>constant.character.escape.lpc</string>
-          </dict>
+					</dict>
 					<dict>
 						<key>match</key>
 						<string>\\.</string>
 						<key>name</key>
 						<string>invalid.illegal.unknown-escape.lpc</string>
-          </dict>
-        </array>
-      </dict>
+					</dict>
+				</array>
+			</dict>
 			<key>string_placeholder</key>
 			<dict>
 				<key>patterns</key>
@@ -962,19 +962,19 @@
                   [diouxXDOUeEfFgGaACcSspnYyMmDdHhWtzp%{}]         # conversion type</string>
 						<key>name</key>
 						<string>constant.other.placeholder.lpc</string>
-          </dict>
+					</dict>
 					<dict>
 						<key>match</key>
 						<string>%(?!\s|%)(!&lt;%)</string>
 						<key>name</key>
 						<string>invalid.illegal.placeholder.lpc</string>
-          </dict>
-        </array>
-      </dict>
-    </dict>
+					</dict>
+				</array>
+			</dict>
+		</dict>
 		<key>scopeName</key>
 		<string>source.lpc</string>
 		<key>uuid</key>
 		<string>f0c5f4ad-3e8a-4add-9ebf-2ce1d5e5262f</string>
-  </dict>
+	</dict>
 </plist>
