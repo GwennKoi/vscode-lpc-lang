@@ -7,6 +7,10 @@ LPmud C Language syntax highlighting for the FLUFFOS branch of LPmud drivers.
 Basic syntax highlighting for LPC
 
 ## Release Notes
+### v 0.4.0
+* Fixed issue with snippets (thanks to gesslar)
+* Added .lpc as a filetype
+
 ### v 0.3.0
 * Added standard color tag support
 * Fixed issue with extra paren appearing when defining mappings and arrays.
