@@ -37,7 +37,8 @@
       ],
       "extensions": [
         ".c",
-        ".h"
+        ".h",
+        ".lpc"
       ],
       "configuration": "./language-configuration.json"
     }],
