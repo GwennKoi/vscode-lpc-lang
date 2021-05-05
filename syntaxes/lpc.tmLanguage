@@ -6,6 +6,7 @@
 		<array>
 			<string>c</string>
 			<string>h</string>
+			<string>lpc</string>
 		</array>
 		<key>firstLineMatch</key>
 		<string>(-[*]-( [Mm]ode:)? [Ll][Pp][Cc] -[*]-|^#!/.*\blpc\b)</string>
@@ -100,80 +101,6 @@
 				<string>(?:\b|(?&lt;!\.)(?=\.))((0(x|X)[0-9a-fA-F]*)|(0(b|B)[01]+)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)\b</string>
 				<key>name</key>
 				<string>constant.numeric.lpc</string>
-			</dict>
-			<dict>
-				<key>begin</key>
-				<string>"</string>
-				<key>beginCaptures</key>
-				<dict>
-					<key>0</key>
-					<dict>
-						<key>name</key>
-						<string>punctuation.definition.string.begin.lpc</string>
-					</dict>
-				</dict>
-				<key>end</key>
-				<string>"</string>
-				<key>endCaptures</key>
-				<dict>
-					<key>0</key>
-					<dict>
-						<key>name</key>
-						<string>punctuation.definition.string.end.lpc</string>
-					</dict>
-				</dict>
-				<key>name</key>
-				<string>string.quoted.double.lpc</string>
-				<key>patterns</key>
-				<array>
-					<dict>
-						<key>include</key>
-						<string>#string_escaped_char</string>
-					</dict>
-					<dict>
-						<key>include</key>
-						<string>#string_placeholder</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>comment</key>
-				<string>Multiline string literal</string>
-				<key>match</key>
-				<string>(@{1,2}(\w*))\n((.|\n)*?)\n(###\s*)?(\2)\b</string>
-				<key>name</key>
-				<string>string.quoted.other.lpc</string>
-			</dict>
-			<dict>
-				<key>begin</key>
-				<string>'</string>
-				<key>beginCaptures</key>
-				<dict>
-					<key>0</key>
-					<dict>
-						<key>name</key>
-						<string>punctuation.definition.string.begin.lpc</string>
-					</dict>
-				</dict>
-				<key>end</key>
-				<string>'</string>
-				<key>endCaptures</key>
-				<dict>
-					<key>0</key>
-					<dict>
-						<key>name</key>
-						<string>punctuation.definition.string.end.lpc</string>
-					</dict>
-				</dict>
-				<key>name</key>
-				<string>string.quoted.single.lpc</string>
-				<key>patterns</key>
-				<array>
-					<dict>
-						<key>include</key>
-						<string>#string_escaped_char</string>
-					</dict>
-				</array>
 			</dict>
 			<dict>
 				<key>begin</key>
