@@ -2,10 +2,16 @@
 	"name": "vscode-lpc-lang",
 	"displayName": "LPC Language",
 	"description": "LPmud C Language syntax highlighting for the FLUFFOS branch of LPmud drivers.",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "undeadfish",
 	"engines": {
 		"vscode": "^1.55.0"
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint . --ext .ts,.tsx",
+		"watch": "tsc -watch -p ./"
 	},
 	"icon": "images/lpc-logo.png",
 	"categories": [
@@ -133,12 +139,6 @@
 				"path": "./snippets/lpc-system.json"
 			}
 		]
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"lint": "eslint . --ext .ts,.tsx",
-		"watch": "tsc -watch -p ./"
 	},
 	"devDependencies": {
 		"@types/node": "^12.12.0",
