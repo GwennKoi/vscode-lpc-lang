@@ -82,7 +82,7 @@
 			</dict>
 			<dict>
 				<key>match</key>
-				<string>\b(float|int|void|object|class|mapping|string|mixed|function)\b</string>
+				<string>\b(float|int|void|object|class|mapping|string|mixed|function|ref)\b</string>
 				<key>name</key>
 				<string>storage.type.lpc</string>
 			</dict>
