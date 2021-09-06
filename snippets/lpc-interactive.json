@@ -5,7 +5,7 @@
     },
     "command": {
         "prefix": "command",
-        "body": "command(${1:string str},${2:object ob})"
+        "body": "command(${1:string str})"
     },
     "commands": {
         "prefix": "commands",
