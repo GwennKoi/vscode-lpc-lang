@@ -33,7 +33,7 @@
     },
     "find_object": {
         "prefix": "find_object",
-        "body": "find_object(${1:string filename})"
+        "body": "find_object(${1:string filename}${2:, int flag})"
     },
     "first_inventory": {
         "prefix": "first_inventory",
@@ -41,7 +41,7 @@
     },
     "load_object": {
         "prefix": "load_object",
-        "body": "load_object(${1:string filename})"
+        "body": "load_object(${1:string filename}${2:, int flag})"
     },
     "master ": {
         "prefix": "master",
