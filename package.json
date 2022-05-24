@@ -2,8 +2,8 @@
 	"name": "vscode-lpc-lang",
 	"displayName": "LPC Language",
 	"description": "LPmud C Language syntax highlighting for the FLUFFOS branch of LPmud drivers.",
-	"version": "1.0.1",
-	"publisher": "undeadfish",
+	"version": "1.0.2",
+	"publisher": "gwennkoi",
 	"engines": {
 		"vscode": "^1.55.0"
 	},
@@ -29,10 +29,10 @@
 		"pike",
 		"lpc"
 	],
-	"homepage": "https://github.com/undeadfish/vscode-lpc-lang/blob/master/README.md",
+	"homepage": "https://github.com/GwennKoi/vscode-lpc-lang/blob/master/README.md",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/undeadfish/vscode-lpc-lang.git"
+		"url": "https://github.com/GwennKoi/vscode-lpc-lang.git"
 	},
 	"activationEvents": [
 		"onLanguage:lpc"
