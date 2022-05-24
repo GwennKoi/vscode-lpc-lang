@@ -30,4 +30,4 @@ Basic syntax highlighting for LPC
 
 ## Contribute
 
-If you'd like to contribute please check out our project page: [undeadfish/vscode-lpc-lang](http://github.com/undeadfish/vscode-lpc-lang)
+If you'd like to contribute please check out our project page: [GwennKoi/vscode-lpc-lang](http://github.com/GwennKoi/vscode-lpc-lang)
