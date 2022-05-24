@@ -2,10 +2,10 @@
 	"name": "vscode-lpc-lang",
 	"displayName": "LPC Language",
 	"description": "LPmud C Language syntax highlighting for the FLUFFOS branch of LPmud drivers.",
-	"version": "1.0.2",
-	"publisher": "gwennkoi",
+	"version": "1.0.3",
+	"publisher": "undeadfish",
 	"engines": {
-		"vscode": "^1.55.0"
+		"vscode": "^1.67.0"
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
