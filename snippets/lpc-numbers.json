@@ -7,6 +7,10 @@
         "prefix": "random",
         "body": "random(${1:int num})"
     },
+    "secure_random" : {
+        "prefix" : "secure_random",
+        "body" : "secure_random(${1:int num})"
+    },
     "to_float": {
         "prefix": "to_float",
         "body": "to_float(${1:int i})"

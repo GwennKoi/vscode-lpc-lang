@@ -1,11 +1,11 @@
 {
-    "apply": {
-        "prefix": "apply",
-        "body": "apply(${1:mixed f},${2:mixed *args})"
-    },
     "bind": {
         "prefix": "bind",
         "body": "bind(${1:function f},${2:object ob})"
+    },
+    "defer": {
+        "prefix" : "defer",
+        "body" : "defer((: ${1:functionname} :))"
     },
     "evaluate": {
         "prefix": "evaluate",

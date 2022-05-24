@@ -43,10 +43,6 @@
         "prefix": "",
         "body": "stat(${1:string file_path},${2:void|int flag} )"
     },
-    "tail": {
-        "prefix": "tail",
-        "body": "tail(${1:string path})"
-    },
     "write_bytes": {
         "prefix": "write_bytes",
         "body": "write_bytes(${1:string path},${2:int start},${3:string bytes})"
