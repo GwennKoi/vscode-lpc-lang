@@ -71,6 +71,10 @@
         "prefix": "printf",
         "body": "printf(${1:string format},${2:...})"
     },
+    "query_encoding" : {
+        "prefix" : "query_encoding",
+        "body" : "query_encoding()"
+    },
     "query_host_name": {
         "prefix": "query_host_name",
         "body": "query_host_name()"
@@ -111,6 +115,10 @@
         "prefix": "say",
         "body": "say(${1:string str},${2:object obj})"
     },
+    "set_encoding" : {
+        "prefix" : "set_encoding",
+        "body" : "set_encoding(${1:void|string encoding})"
+    },
     "set_this_player": {
         "prefix": "set_this_player",
         "body": "set_this_player(${1:object who})"
@@ -122,6 +130,18 @@
     "snoop": {
         "prefix": "snoop",
         "body": "snoop(${1:object snooper},${2:object snoopee})"
+    },
+    "telnet_ga" : {
+        "prefix" : "telnet_ga",
+        "body" : "telnet_ga()"
+    },
+    "telnet_msp_oob" : {
+        "prefix" : "telnet_msp_oob",
+        "body" : "telnet_msp_oob(${1:string message})"
+    },
+    "telnet_nop" : {
+        "prefix" : "telnet_nop",
+        "body" : "telnet_nop()"
     },
     "this_interactive": {
         "prefix": "this_interactive",

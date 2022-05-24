@@ -7,6 +7,10 @@
         "prefix": "bufferp",
         "body": "bufferp(${1:mixed buffer})"
     },
+    "buffer_transcode" : {
+        "prefix": "buffertrans",
+        "body"  : "buffer_transcode(${1:string source}, ${2:string from_encoding}, ${3:string to_encoding})"
+    },
     "crc32": {
         "prefix": "crc",
         "body": "crc32(${1:buffer|string buffer})"
