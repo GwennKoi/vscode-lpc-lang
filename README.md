@@ -7,6 +7,9 @@ LPmud C Language syntax highlighting for the FLUFFOS branch of LPmud drivers.
 Basic syntax highlighting for LPC
 
 ## Release Notes
+### v 1.0.5
+* Reverted out the language server items for the moment
+
 ### v 1.0.2
 * Added and removed some efuns from snippets (thanks to gesslar)
 

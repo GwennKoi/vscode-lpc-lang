@@ -104,6 +104,80 @@
 			</dict>
 			<dict>
 				<key>begin</key>
+				<string>"</string>
+				<key>beginCaptures</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.definition.string.begin.lpc</string>
+					</dict>
+				</dict>
+				<key>end</key>
+				<string>"</string>
+				<key>endCaptures</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.definition.string.end.lpc</string>
+					</dict>
+				</dict>
+				<key>name</key>
+				<string>string.quoted.double.lpc</string>
+				<key>patterns</key>
+				<array>
+					<dict>
+						<key>include</key>
+						<string>#string_escaped_char</string>
+					</dict>
+					<dict>
+						<key>include</key>
+						<string>#string_placeholder</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>comment</key>
+				<string>Multiline string literal</string>
+				<key>match</key>
+				<string>(@{1,2}(\w*))\n((.|\n)*?)\n(###\s*)?(\2)\b</string>
+				<key>name</key>
+				<string>string.quoted.other.lpc</string>
+			</dict>
+			<dict>
+				<key>begin</key>
+				<string>'</string>
+				<key>beginCaptures</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.definition.string.begin.lpc</string>
+					</dict>
+				</dict>
+				<key>end</key>
+				<string>'</string>
+				<key>endCaptures</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.definition.string.end.lpc</string>
+					</dict>
+				</dict>
+				<key>name</key>
+				<string>string.quoted.single.lpc</string>
+				<key>patterns</key>
+				<array>
+					<dict>
+						<key>include</key>
+						<string>#string_escaped_char</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>begin</key>
 				<string>(?x)
                  ^\s*\#\s*(define)\s+           # define
                  ((?&lt;id&gt;[a-zA-Z_][a-zA-Z0-9_]*))    # macro name
