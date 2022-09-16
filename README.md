@@ -1,4 +1,4 @@
-# Visual Studio Code LPC Language Extension
+# LPC Language Extension for Visual Studio Code
 
 LPmud C Language syntax highlighting for the FLUFFOS branch of LPmud drivers.
 
