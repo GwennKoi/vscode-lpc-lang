@@ -43,6 +43,10 @@
         "prefix": "get_char",
         "body": "get_char(${1:string|function fun},${2:int flag},${3:...})"
     },
+    "has_gmcp": {
+        "prefix": "has_gmcp",
+        "body": "has_gmcp(${1: object player})"
+    },
     "in_edit": {
         "prefix": "in_edit",
         "body": "in_edit(${1:void|object player})"
@@ -114,6 +118,10 @@
     "say": {
         "prefix": "say",
         "body": "say(${1:string str},${2:object obj})"
+    },
+    "send_gmcp": {
+        "prefix": "send_gmcp",
+        "body": "send_gmcp(${1:string message})"
     },
     "set_encoding" : {
         "prefix" : "set_encoding",
