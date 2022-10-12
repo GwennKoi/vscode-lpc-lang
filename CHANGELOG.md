@@ -1,4 +1,8 @@
 # Change Log
+
+## v 1.1.0
+* Added GMCP snippets
+
 ## v 1.0.5
 * Reverted out the language server items for the moment
 
