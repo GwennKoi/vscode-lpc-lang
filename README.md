@@ -7,7 +7,7 @@ LPmud C Language syntax highlighting for the FLUFFOS branch of LPmud drivers.
 Basic syntax highlighting for LPC
 
 ## Release Notes
-###
+### v1.1.1
 * Removing triangular brackets due to problems they were creating in source for
   FluffOS users. If this is necessary for other drivers, can revisit in the
   future.
