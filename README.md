@@ -8,9 +8,13 @@ Basic syntax highlighting for LPC
 
 ## Release Notes
 ### v1.1.1
-* Removing triangular brackets due to problems they were creating in source for
-  FluffOS users. If this is necessary for other drivers, can revisit in the
-  future.
+* Removed triangular brackets that were causing issues. `<` and `>` are not
+  used in FluffOS as brackets. If needed for other drivers, can re-evaluate
+  in the future.
+* Modified standard colour tag support to be arrays instead of objects, since
+  they are basic and don't require additional syntaxes such as "notIn".
+* Removed `activationEvents` from package.json since VS Code advises that this
+  is inferred information.
 
 ### v 1.1.0
 * Added GMCP snippets
