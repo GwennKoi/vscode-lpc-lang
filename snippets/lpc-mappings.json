@@ -3,10 +3,6 @@
         "prefix": "allocate_mapping",
         "body": "allocate_mapping(${1:int size})"
     },
-    "each": {
-        "prefix": "each",
-        "body": "each(${1:mapping m}${2:, int reset})"
-    },
     "filter_map_string": {
         "prefix": "filter_map_str",
         "body": "filter_mapping(${1:mapping m}, ${2:string func}, ${3:object ob}${4:, mixed extra...})"

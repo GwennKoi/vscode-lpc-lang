@@ -5,7 +5,15 @@
     },
     "call_out": {
         "prefix": "call_out",
-        "body": "call_other(${1:string|function fun},${2:int delay}${3:,mixed arg})"
+        "body": "call_other(${1:string|function fun},${2:float|int delay}${3:,mixed arg})"
+    },
+    "call_out_walltime" : {
+        "prefix": "call_out_walltime",
+        "body": "call_out_walltime(${1:string|function fun}, ${2:float|int delay}, ${3:mixed arg})"
+    },
+    "call_stack" : {
+        "prefix" : "call_stack",
+        "body" : "call_stack(${1:int level})"
     },
     "catch": {
         "prefix": "catch",
@@ -18,6 +26,10 @@
     "previous_object": {
         "prefix": "previous_object",
         "body": "previous_object(${1:void|int prevobs})"
+    },
+    "query_shadowing" :{
+        "prefix" : "query_shadowing",
+        "body" : "query_shadowing(${1:object ob})"
     },
     "shadowp": {
         "prefix": "shadowp",

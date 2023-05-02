@@ -11,14 +11,6 @@
         "prefix": "db_connect",
         "body": "db_connect(${1:string host},${2:string db})"
     },
-    "db_connect_user": {
-        "prefix": "db_connect",
-        "body": "db_connect(${1:string host},${2:string db},${3:string user})"
-    },
-    "db_connect_user_type": {
-        "prefix": "db_connect",
-        "body": "db_connect(${1:string host},${2:string db},${3:string user},${4:int type})"
-    },
     "db_exec": {
         "prefix": "db_exec",
         "body": "db_exec(${1:int handle},${2:string sql_query})"

@@ -25,11 +25,11 @@
     },
     "environment": {
         "prefix": "environment",
-        "body": "environment(${1:object obj})"
+        "body": "environment(${1:void|object obj})"
     },
     "file_name": {
         "prefix": "file_name",
-        "body": "file_name(${1:object obj})"
+        "body": "file_name(${1:void|object obj})"
     },
     "find_object": {
         "prefix": "find_object",
@@ -37,7 +37,7 @@
     },
     "first_inventory": {
         "prefix": "first_inventory",
-        "body": "first_inventory(${1:mixed obj})"
+        "body": "first_inventory(${1:void|string|object obj})"
     },
     "load_object": {
         "prefix": "load_object",
@@ -57,7 +57,7 @@
     },
     "next_inventory": {
         "prefix": "next_inventory",
-        "body": "next_inventory(${1:object ob})"
+        "body": "next_inventory(${1:void|object ob})"
     },
     "objectp": {
         "prefix": "objectp",
@@ -77,7 +77,7 @@
     },
     "present": {
         "prefix": "present",
-        "body": "present(${1:mixed str}, ${2:object obj})"
+        "body": "present(${1:string|object ob}, ${2:void|object container})"
     },
     "query_heart_beat": {
         "prefix": "query_heart_beat",

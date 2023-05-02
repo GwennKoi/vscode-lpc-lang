@@ -1,8 +1,4 @@
 {
-    "break_string": {
-        "prefix": "break_string",
-        "body": "break_string(${1:string str | int foobar}, ${2:int len}${3:, void|int indent | string indent })"
-    },
     "capitalize": {
         "prefix": "capitalize",
         "body": "capitalize(${1:string str})"
@@ -27,6 +23,10 @@
         "prefix": "lower_case",
         "body": "lower_case(${1:string str})"
     },
+    "ltrim" : {
+        "prefix" : "ltrim",
+        "body" : "ltrim(${1:string message})"
+    },
     "reg_assoc": {
         "prefix": "reg_assoc",
         "body": "reg_assoc(${1:string  str}, ${2:string *pat_arr}, ${3:mixed *tok_arr}${4:, void|mixed def})"
@@ -47,13 +47,13 @@
         "prefix": "replace_string",
         "body": "replace_string(${1:string str}, ${2:string pattern}, ${3:string replace}, ${4:int first}, ${5:int last})"
     },
+    "rtrim" : {
+        "prefix" : "rtrim",
+        "body" : "trtim(${1:string message})"
+    },
     "set_bit": {
         "prefix": "set_bit",
         "body": "set_bit(${1:string str}, ${2:int n})"
-    },
-    "printf": {
-        "prefix": "printf",
-        "body": "printf(${1:string formatting}${2,...})"
     },
     "sprintf": {
         "prefix": "sprintf",
@@ -67,6 +67,14 @@
         "prefix": "strcmp",
         "body": "strcmp(${1:string one}, ${2:string two})"
     },
+    "string_decode" : {
+        "prefix" : "string_decode",
+        "body" : "string_decode(${1:buffer buf}, ${2:string encoding})"
+    },
+    "string_encode" : {
+        "prefix" : "string_encode",
+        "body" : "string_encode(${1:string message}, ${2:string encoding})"
+    },
     "stringp": {
         "prefix": "stringp",
         "body": "stringp(${1:mixed arg})"
@@ -79,8 +87,16 @@
         "prefix": "strsrch",
         "body": "strsrch(${1:string str}, ${2:string substr | int char}, ${3:int flag})"
     },
+    "strwidth" : {
+        "prefix" : "strwidth",
+        "body" : "strwidth(${1:string message})"
+    },
     "test_bit": {
         "prefix": "test_bit",
         "body": "test_bit(${1:string str},${2:int n})"
+    },
+    "trim" : {
+        "prefix" : "trim",
+        "body" : "trim(${1:string message})"
     }
 }

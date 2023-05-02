@@ -1,4 +1,14 @@
 # Change Log
+
+## v 1.1.0
+* Added GMCP snippets
+
+## v 1.0.5
+* Reverted out the language server items for the moment
+
+## v 1.0.2
+* Added and removed some efuns from snippets (thanks to gesslar)
+
 ## v 1.0.0
 * Strings are now handled by the language server.
 * The language server should fix the @text/text block issues.
