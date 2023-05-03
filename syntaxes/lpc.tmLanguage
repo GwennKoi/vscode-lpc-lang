@@ -941,16 +941,14 @@
 				<array>
 					<dict>
 						<key>match</key>
-						<string>(?x)%
-                  (?!\s|%)                            # Not followed by space or %
-                  \*?                                 # May be followed by a *
-                  (\d+\$)?                           # field (argument #)
-                  [*#0\- +'\[\]]*                   # flags
-                  [,;:_]?                              # separator character (AltiVec)
-                  ((-?\d+)|\*(-?\d+\$)?)?          # minimum field width
-                  (\.((-?\d+)|\*(-?\d+\$)?)?)?    # precision
-                  (hh|h|ll|l|j|t|z|q|L|vh|vl|v|hv|hl)? # length modifier
-                  [diouxXDOUeEfFgGaACcSspnYyMmDdHhWtzp%{}]         # conversion type</string>
+						<string>(?x) %
+						(\d+\$)?                           	 # field (argument #)
+						[#0\- +']*                           # flags
+						[,;:_]?                              # separator character (AltiVec)
+						((-?\d+)|\*(-?\d+\$)?)?          	 # minimum field width
+						(\.((-?\d+)|\*(-?\d+\$)?)?)?    	 # precision
+						(hh|h|ll|l|j|t|z|q|L|vh|vl|v|hv|hl)? # length modifier
+						[diouxXDOUeEfFgGaACcSspn%]           # conversion type</string>
 						<key>name</key>
 						<string>constant.other.placeholder.lpc</string>
 					</dict>
