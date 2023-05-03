@@ -103,6 +103,10 @@
 				<string>constant.numeric.lpc</string>
 			</dict>
 			<dict>
+				<key>include</key>
+				<string>#operators</string>
+			</dict>
+			<dict>
 				<key>begin</key>
 				<string>"</string>
 				<key>beginCaptures</key>
@@ -955,6 +959,60 @@
 						<string>%(?!\s|%)(!&lt;%)</string>
 						<key>name</key>
 						<string>invalid.illegal.placeholder.lpc</string>
+					</dict>
+				</array>
+			</dict>
+			<key>operators</key>
+			<dict>
+				<key>patterns</key>
+				<array>
+					<dict>
+						<key>match</key>
+						<string>\-\-</string>
+						<key>name</key>
+						<string>keyword.operator.decrement.lpc</string>
+					</dict>
+					<dict>
+						<key>match</key>
+						<string>\+\+</string>
+						<key>name</key>
+						<string>keyword.operator.increment.lpc</string>
+					</dict>
+					<dict>
+						<key>match</key>
+						<string>[\+\-\*\/%]\s*=</string>
+						<key>name</key>
+						<string>keyword.operator.assignment.compound.lpc</string>
+					</dict>
+					<dict>
+						<key>match</key>
+						<string>&amp;=|\^=|&lt;&lt;=|&gt;&gt;=|\|=</string>
+						<key>name</key>
+						<string>keyword.operator.assignment.compound.bitwise.lpc</string>
+					</dict>
+					<dict>
+						<key>match</key>
+						<string><<|>></string>
+						<key>name</key>
+						<string>keyword.operator.bitwise.shift.lpc</string>
+					</dict>
+					<dict>
+						<key>match</key>
+						<string>!=|&lt;=|&gt;=|==|&lt;|&gt;</string>
+						<key>name</key>
+						<string>keyword.operator.comparison.lpc</string>
+					</dict>
+					<dict>
+						<key>match</key>
+						<string>&amp;&amp;|!|\|\|</string>
+						<key>name</key>
+						<string>keyword.operator.logical.lpc</string>
+					</dict>
+					<dict>
+						<key>match</key>
+						<string>%|\*|/|-|\+</string>
+						<key>name</key>
+						<string>keyword.operator.lpc</string>
 					</dict>
 				</array>
 			</dict>
