@@ -54,6 +54,14 @@
 			</dict>
 			<dict>
 				<key>include</key>
+				<string>#dot_access</string>
+			</dict>
+			<dict>
+				<key>include</key>
+				<string>#pointer_access</string>
+			</dict>
+			<dict>
+				<key>include</key>
 				<string>#parens</string>
 			</dict>
 			<dict>
@@ -410,28 +418,6 @@
 			</dict>
 		</array>
 		<key>repository</key>
-		<dict>
-			<key>begin</key>
-			<string>((\.)|(-&gt;))\s*(([a-zA-Z_][a-zA-Z_0-9]*)\b(?!\s*\())?</string>
-			<key>captures</key>
-			<dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.separator.dot-access.lpc</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.separator.pointer-access.lpc</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>name</key>
-					<string>variable.other.member.lpc</string>
-				</dict>
-			</dict>
-		</dict>
 		<dict>
 			<key>block</key>
 			<dict>
@@ -999,6 +985,19 @@
 						<string>invalid.illegal.placeholder.lpc</string>
 					</dict>
 				</array>
+			</dict>
+			<key>dot_access</key>
+			<dict>
+				<key>match</key>
+				<string>[a-zA-Z0-9_]\s*(\.|-&gt;)\s*[a-zA-Z0-9_]</string>
+				<key>captures</key>
+				<dict>
+					<key>1</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.separator.dot-access.lpc</string>
+					</dict>
+				</dict>
 			</dict>
 			<key>operators</key>
 			<dict>
