@@ -402,6 +402,12 @@
 				<key>name</key>
 				<string>punctuation.separator.delimiter.lpc</string>
 			</dict>
+			<dict>
+				<key>match</key>
+				<string>\.\.\.</string>
+				<key>name</key>
+				<string>punctuation.vararg-ellipses.lpc</string>
+			</dict>
 		</array>
 		<key>repository</key>
 		<dict>
