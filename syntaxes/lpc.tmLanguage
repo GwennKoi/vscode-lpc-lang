@@ -390,14 +390,18 @@
 					</dict>
 				</array>
 			</dict>
-			<key>match</key>
-			<string>;</string>
-			<key>name</key>
-			<string>punctuation.terminator.statement.lpc</string>
-			<key>match</key>
-			<string>,</string>
-			<key>name</key>
-			<string>punctuation.separator.delimiter.lpc</string>
+			<dict>
+				<key>match</key>
+				<string>;</string>
+				<key>name</key>
+				<string>punctuation.terminator.statement.lpc</string>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>,</string>
+				<key>name</key>
+				<string>punctuation.separator.delimiter.lpc</string>
+			</dict>
 		</array>
 		<key>repository</key>
 		<dict>
