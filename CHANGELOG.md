@@ -8,6 +8,7 @@
   they are basic and don't require additional syntaxes such as "notIn".
 * Removed `activationEvents` from package.json since VS Code advises that this
   is inferred information.
+* Added various LPC-language support for syntax highlighting.
 
 ## v 1.1.0
 * Added GMCP snippets
