@@ -115,6 +115,16 @@
 				<string>#operators</string>
 			</dict>
 			<dict>
+				<key>comment</key>
+				<string>For @strings that span multiple lines.</string>
+				<key>begin</key>
+				<string>@{1,2}(\w+)</string>
+				<key>end</key>
+				<string>^\1</string>
+				<key>name</key>
+				<string>string.unquoted.lpc</string>
+			</dict>
+			<dict>
 				<key>begin</key>
 				<string>"</string>
 				<key>beginCaptures</key>
@@ -1017,7 +1027,7 @@
 					</dict>
 					<dict>
 						<key>match</key>
-						<string>[\+\-\*\/%]\s*=</string>
+						<string>[\+\-\*/%]\s*=</string>
 						<key>name</key>
 						<string>keyword.operator.assignment.compound.lpc</string>
 					</dict>
@@ -1035,9 +1045,21 @@
 					</dict>
 					<dict>
 						<key>match</key>
-						<string>!=|&lt;=|&gt;=|==|&lt;|&gt;</string>
+						<string>&amp;|\~|\^|\|</string>
+						<key>name</key>
+						<string>keyword.operator.bitwise.lpc</string>
+					</dict>
+					<dict>
+						<key>match</key>
+						<string>!=|==</string>
 						<key>name</key>
 						<string>keyword.operator.comparison.lpc</string>
+					</dict>
+					<dict>
+						<key>match</key>
+						<string>&lt;=|&gt;=|&lt;|&gt;</string>
+						<key>name</key>
+						<string>keyword.operator.relational.lpc</string>
 					</dict>
 					<dict>
 						<key>match</key>
@@ -1055,8 +1077,35 @@
 						<key>match</key>
 						<string>%|\*|/|-|\+</string>
 						<key>name</key>
-						<string>keyword.operator.lpc</string>
+						<string>keyword.operator.arithmetic.lpc</string>
 					</dict>
+					<!-- <dict>
+						<key>begin</key>
+						<string>\?(?!\s*[?.\[]|\s*$)</string>
+						<key>beginCaptures</key>
+						<dict>
+							<key>0</key>
+							<dict>
+								<key>name</key>
+								<string>keyword.operator.conditional.question-mark.lpc</string>
+							</dict>
+						</dict>
+						<key>end</key>
+						<string>:</string>
+						<key>endCaptures</key>
+						<dict>
+							<key>0</key>
+							<dict>
+								<key>name</key>
+								<string>keyword.operator.conditional.colon.lpc</string>
+							</dict>
+						</dict>
+						<key>patterns</key>
+						<dict>
+							<key>include</key>
+							<string>#block</string>
+						</dict>
+					</dict> -->
 				</array>
 			</dict>
 		</dict>
