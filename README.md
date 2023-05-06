@@ -2,6 +2,9 @@
 
 LPmud C Language syntax highlighting for the FLUFFOS branch of LPmud drivers.
 
+## Contributing
+If you would like to contribute, check out the [TODO.md](TODO.md).
+
 ## Features
 
 Basic syntax highlighting for LPC
