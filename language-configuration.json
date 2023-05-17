@@ -7,8 +7,7 @@
   "brackets": [
     [ "{", "}" ],
     [ "[", "]" ],
-    [ "(", ")" ],
-    [ "<", ">" ]
+    [ "(", ")" ]
   ],
   // symbols that are auto closed when typing
   "autoClosingPairs": [
@@ -19,8 +18,8 @@
     [ "'", "'" ],
     { "open": "/*", "close": "*/", "notIn": ["string", "comment"] },
     // color sequences
-    { "open" : "%^", "close" : "%^" },  // such as %^RED%^ or %^BOLD%^RED%^
-    { "open" : "`<", "close" : ">`" }   // ThresholdRPG's 256-color format `<fff>`
+    [ "%^", "%^" ],  // such as %^RED%^ or %^BOLD%^RED%^
+    [ "`<", ">`" ]   // ThresholdRPG's 256-color format `<fff>`
   ],
   "autoCloseBefore": ";:.,=}])> \n\t",
   // symbols that that can be used to surround a selection
@@ -30,7 +29,6 @@
     [ "{", "}" ],
     [ "[", "]" ],
     [ "(", ")" ],
-    [ "<", ">" ],
     [ "\"", "\"" ],
     [ "'", "'" ]
   ],

@@ -1,5 +1,15 @@
 # Change Log
 
+### v1.1.1
+* Removed triangular brackets that were causing issues. `<` and `>` are not
+  used in FluffOS as brackets. If needed for other drivers, can re-evaluate
+  in the future.
+* Modified standard colour tag support to be arrays instead of objects, since
+  they are basic and don't require additional syntaxes such as "notIn".
+* Removed `activationEvents` from package.json since VS Code advises that this
+  is inferred information.
+* Added various LPC-language support for syntax highlighting.
+
 ## v 1.1.0
 * Added GMCP snippets
 

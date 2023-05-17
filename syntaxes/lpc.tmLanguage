@@ -54,6 +54,14 @@
 			</dict>
 			<dict>
 				<key>include</key>
+				<string>#dot_access</string>
+			</dict>
+			<dict>
+				<key>include</key>
+				<string>#pointer_access</string>
+			</dict>
+			<dict>
+				<key>include</key>
 				<string>#parens</string>
 			</dict>
 			<dict>
@@ -101,6 +109,20 @@
 				<string>(?:\b|(?&lt;!\.)(?=\.))((0(x|X)[0-9a-fA-F]*)|(0(b|B)[01]+)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)\b</string>
 				<key>name</key>
 				<string>constant.numeric.lpc</string>
+			</dict>
+			<dict>
+				<key>include</key>
+				<string>#operators</string>
+			</dict>
+			<dict>
+				<key>comment</key>
+				<string>For @strings that span multiple lines.</string>
+				<key>begin</key>
+				<string>@{1,2}(\w+)</string>
+				<key>end</key>
+				<string>^\1</string>
+				<key>name</key>
+				<string>string.unquoted.lpc</string>
 			</dict>
 			<dict>
 				<key>begin</key>
@@ -385,6 +407,24 @@
 						<string>#block</string>
 					</dict>
 				</array>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>;</string>
+				<key>name</key>
+				<string>punctuation.terminator.statement.lpc</string>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>,</string>
+				<key>name</key>
+				<string>punctuation.separator.delimiter.lpc</string>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>\.\.\.</string>
+				<key>name</key>
+				<string>punctuation.vararg-ellipses.lpc</string>
 			</dict>
 		</array>
 		<key>repository</key>
@@ -937,16 +977,14 @@
 				<array>
 					<dict>
 						<key>match</key>
-						<string>(?x)%
-                  (?!\s|%)                            # Not followed by space or %
-                  \*?                                 # May be followed by a *
-                  (\d+\$)?                           # field (argument #)
-                  [*#0\- +'\[\]]*                   # flags
-                  [,;:_]?                              # separator character (AltiVec)
-                  ((-?\d+)|\*(-?\d+\$)?)?          # minimum field width
-                  (\.((-?\d+)|\*(-?\d+\$)?)?)?    # precision
-                  (hh|h|ll|l|j|t|z|q|L|vh|vl|v|hv|hl)? # length modifier
-                  [diouxXDOUeEfFgGaACcSspnYyMmDdHhWtzp%{}]         # conversion type</string>
+						<string>(?x) %
+						(\d+\$)?                           	 # field (argument #)
+						[#0\- +']*                           # flags
+						[,;:_]?                              # separator character (AltiVec)
+						((-?\d+)|\*(-?\d+\$)?)?          	 # minimum field width
+						(\.((-?\d+)|\*(-?\d+\$)?)?)?    	 # precision
+						(hh|h|ll|l|j|t|z|q|L|vh|vl|v|hv|hl)? # length modifier
+						[diouxXDOUeEfFgGaACcSspn%]           # conversion type</string>
 						<key>name</key>
 						<string>constant.other.placeholder.lpc</string>
 					</dict>
@@ -956,6 +994,118 @@
 						<key>name</key>
 						<string>invalid.illegal.placeholder.lpc</string>
 					</dict>
+				</array>
+			</dict>
+			<key>dot_access</key>
+			<dict>
+				<key>match</key>
+				<string>[a-zA-Z0-9_]\s*(\.|-&gt;)\s*[a-zA-Z0-9_]</string>
+				<key>captures</key>
+				<dict>
+					<key>1</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.separator.dot-access.lpc</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>operators</key>
+			<dict>
+				<key>patterns</key>
+				<array>
+					<dict>
+						<key>match</key>
+						<string>\-\-</string>
+						<key>name</key>
+						<string>keyword.operator.decrement.lpc</string>
+					</dict>
+					<dict>
+						<key>match</key>
+						<string>\+\+</string>
+						<key>name</key>
+						<string>keyword.operator.increment.lpc</string>
+					</dict>
+					<dict>
+						<key>match</key>
+						<string>[\+\-\*/%]\s*=</string>
+						<key>name</key>
+						<string>keyword.operator.assignment.compound.lpc</string>
+					</dict>
+					<dict>
+						<key>match</key>
+						<string>&amp;=|\^=|&lt;&lt;=|&gt;&gt;=|\|=</string>
+						<key>name</key>
+						<string>keyword.operator.assignment.compound.bitwise.lpc</string>
+					</dict>
+					<dict>
+						<key>match</key>
+						<string>&lt;&lt;|&gt;&gt;</string>
+						<key>name</key>
+						<string>keyword.operator.bitwise.shift.lpc</string>
+					</dict>
+					<dict>
+						<key>match</key>
+						<string>&amp;|\~|\^|\|</string>
+						<key>name</key>
+						<string>keyword.operator.bitwise.lpc</string>
+					</dict>
+					<dict>
+						<key>match</key>
+						<string>!=|==</string>
+						<key>name</key>
+						<string>keyword.operator.comparison.lpc</string>
+					</dict>
+					<dict>
+						<key>match</key>
+						<string>&lt;=|&gt;=|&lt;|&gt;</string>
+						<key>name</key>
+						<string>keyword.operator.relational.lpc</string>
+					</dict>
+					<dict>
+						<key>match</key>
+						<string>&amp;&amp;|!|\|\|</string>
+						<key>name</key>
+						<string>keyword.operator.logical.lpc</string>
+					</dict>
+					<dict>
+						<key>match</key>
+						<string>=</string>
+						<key>name</key>
+						<string>keyword.operator.assignment.lpc</string>
+					</dict>
+					<dict>
+						<key>match</key>
+						<string>%|\*|/|-|\+</string>
+						<key>name</key>
+						<string>keyword.operator.arithmetic.lpc</string>
+					</dict>
+					<!-- <dict>
+						<key>begin</key>
+						<string>\?(?!\s*[?.\[]|\s*$)</string>
+						<key>beginCaptures</key>
+						<dict>
+							<key>0</key>
+							<dict>
+								<key>name</key>
+								<string>keyword.operator.conditional.question-mark.lpc</string>
+							</dict>
+						</dict>
+						<key>end</key>
+						<string>:</string>
+						<key>endCaptures</key>
+						<dict>
+							<key>0</key>
+							<dict>
+								<key>name</key>
+								<string>keyword.operator.conditional.colon.lpc</string>
+							</dict>
+						</dict>
+						<key>patterns</key>
+						<dict>
+							<key>include</key>
+							<string>#block</string>
+						</dict>
+					</dict> -->
 				</array>
 			</dict>
 		</dict>
