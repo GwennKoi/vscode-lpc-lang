@@ -18,6 +18,7 @@ varargs nomask void some_function(int a, float b, mapping c, string d) {
     int hex_number ;
     float another_float ;
     object ob ;
+    string multi_line_string, *multi_line_array ;
 
     foo = new(class Foo);
     foo->some_int = a;
@@ -46,5 +47,14 @@ varargs nomask void some_function(int a, float b, mapping c, string d) {
     ob->remove() ;
     this_object()->remove() ;
 
+    multi_line_string = @text
+This is a multiline string.
+We stan a good multiline string.
+text;
+
+    multi_line_array = @@lines
+This is a multiline array.
+Heckin' yeah we love a multiline array.
+lines ;
     return;
 }
