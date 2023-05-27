@@ -14,7 +14,7 @@ Basic syntax highlighting for LPC
 ### v1.1.2
 * Added `varargs` to `storage.modifier.lpc`
 * Fixed `.` and `->` access to accessing class members as `keyword.operator.access.lpc`
-* Added `_` separator for integer literals in `constant.numeric.lpc`
+* Added `_` separator for integer and float literals in `constant.numeric.lpc`
 ### v1.1.1
 * Removed triangular brackets that were causing issues. `<` and `>` are not
   used in FluffOS as brackets. If needed for other drivers, can re-evaluate
@@ -41,3 +41,4 @@ Basic syntax highlighting for LPC
 ## Contribute
 
 If you'd like to contribute please check out our project page: [GwennKoi/vscode-lpc-lang](http://github.com/GwennKoi/vscode-lpc-lang)
+
