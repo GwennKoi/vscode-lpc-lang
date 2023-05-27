@@ -98,7 +98,7 @@
 				<key>comment</key>
 				<string>Modifiers</string>
 				<key>match</key>
-				<string>\b(public|private|protected|nosave|nomask)\b</string>
+				<string>\b(public|private|protected|nosave|nomask|varargs)\b</string>
 				<key>name</key>
 				<string>storage.modifier.lpc</string>
 			</dict>
@@ -106,7 +106,7 @@
 				<key>comment</key>
 				<string>Numeric values</string>
 				<key>match</key>
-				<string>(?:\b|(?&lt;!\.)(?=\.))((0(x|X)[0-9a-fA-F]*)|(0(b|B)[01]+)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)\b</string>
+				<string>(?:\b|(?&lt;!\.)(?=\.))((0(x|X)[0-9a-fA-F]*)|(([0-9_]+\.?[0-9_]*)|(\.[0-9_]+))((-)?[0-9_]+)?)\b</string>
 				<key>name</key>
 				<string>constant.numeric.lpc</string>
 			</dict>
@@ -158,14 +158,6 @@
 						<string>#string_placeholder</string>
 					</dict>
 				</array>
-			</dict>
-			<dict>
-				<key>comment</key>
-				<string>Multiline string literal</string>
-				<key>match</key>
-				<string>(@{1,2}(\w*))\n((.|\n)*?)\n(###\s*)?(\2)\b</string>
-				<key>name</key>
-				<string>string.quoted.other.lpc</string>
 			</dict>
 			<dict>
 				<key>begin</key>
@@ -999,13 +991,13 @@
 			<key>dot_access</key>
 			<dict>
 				<key>match</key>
-				<string>[a-zA-Z0-9_]\s*(\.|-&gt;)\s*[a-zA-Z0-9_]</string>
+				<string>\b[a-zA-Z_][a-zA-Z0-9_]*\s*(\.|-&gt;)\s*[a-zA-Z_][a-zA-Z0-9_]*\b</string>
 				<key>captures</key>
 				<dict>
 					<key>1</key>
 					<dict>
 						<key>name</key>
-						<string>punctuation.separator.dot-access.lpc</string>
+						<string>keyword.operator.access.lpc</string>
 					</dict>
 				</dict>
 			</dict>
