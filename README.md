@@ -11,6 +11,9 @@ Basic syntax highlighting for LPC
 
 ## Release Notes
 
+### v1.1.4
+* Trivial change, adding preprocessor directives to sample.h
+
 ### v1.1.3
 * Added the following efun snippets: `time_ns()`, `sys_network_ports()`, `sys_reload_tls()`
 
