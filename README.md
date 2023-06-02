@@ -11,6 +11,9 @@ Basic syntax highlighting for LPC
 
 ## Release Notes
 
+### v1.1.3
+* Trivial change, adding preprocessor directives to sample.h
+
 ### v1.1.2
 * Added `varargs` to `storage.modifier.lpc`
 * Fixed `.` and `->` access to accessing class members as `keyword.operator.access.lpc`
