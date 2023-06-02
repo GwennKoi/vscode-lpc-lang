@@ -1,5 +1,8 @@
 # Change Log
 
+### v1.1.3
+* Added the following efun snippets: `time_ns()`, `sys_network_ports()`, `sys_reload_tls()`
+
 ### v1.1.2
 * Added `varargs` to `storage.modifier.lpc`
 * Fixed `.` and `->` access to accessing class members as `keyword.operator.access.lpc`
