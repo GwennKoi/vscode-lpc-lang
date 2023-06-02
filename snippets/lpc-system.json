@@ -31,9 +31,9 @@
         "prefix": "find_call_out",
         "body": "find_call_out(${1:string func})"
     },
-    "flush_messages" :{
+    "flush_messages": {
         "prefix": "flush_messages",
-        "body" : "flush_message(${1:void|object user})"
+        "body": "flush_message(${1:void|object user})"
     },
     "function_exists": {
         "prefix": "function_exists",
@@ -59,9 +59,9 @@
         "prefix": "max_eval_cost",
         "body": "max_eval_cost()"
     },
-    "perf_counter_ns" : {
-        "prefix" : "perf_counter_ns",
-        "body" : "perf_counter_ns()"
+    "perf_counter_ns": {
+        "prefix": "perf_counter_ns",
+        "body": "perf_counter_ns()"
     },
     "reclaim_objects": {
         "prefix": "reclaim_objects",
@@ -87,25 +87,33 @@
         "prefix": "shutdown",
         "body": "shutdown(${1:int how})"
     },
-    "strftime" : {
-        "prefix" : "strftime",
-        "body" : "strftime(${1:string format}, ${2:int unixtime})"
+    "strftime": {
+        "prefix": "strftime",
+        "body": "strftime(${1:string format}, ${2:int unixtime})"
     },
-    "strptime" : {
-        "prefix" : "strptime",
-        "body" : "strptime(${1:string format}, ${2:string time_as_string})"
+    "strptime": {
+        "prefix": "strptime",
+        "body": "strptime(${1:string format}, ${2:string time_as_string})"
+    },
+    "sys_reload_tls": {
+        "prefix": "sys_reload_tls",
+        "body": "sys_reload_tls(${1:int external_port_#})"
     },
     "time": {
         "prefix": "time",
         "body": "time()"
     },
-    "trace_end" : {
-        "prefix" : "trace_end",
-        "body" : "trace_end()"
+    "time_ns": {
+        "prefix": "time_ns",
+        "body": "time_ns()"
     },
-    "trace_start" : {
-        "prefix" : "trace_start",
-        "body" : "trace_start(${1:string filename}, ${2:void|int auto_stop_sec})"
+    "trace_end": {
+        "prefix": "trace_end",
+        "body": "trace_end()"
+    },
+    "trace_start": {
+        "prefix": "trace_start",
+        "body": "trace_start(${1:string filename}, ${2:void|int auto_stop_sec})"
     },
     "uptime": {
         "prefix": "uptime",
