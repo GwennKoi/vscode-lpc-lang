@@ -1,6 +1,6 @@
 # Change Log
 
-### v1.1.3
+### v1.1.4
 * Trivial change, adding preprocessor directives to sample.h
 
 ### v1.1.3
