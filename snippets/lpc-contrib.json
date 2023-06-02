@@ -3,9 +3,9 @@
       "prefix": "abs",
       "body": "abs(${1:float f|int i})"
     },
-    "assemble_class" : {
-      "prefix" : "assemble_class",
-      "body" : "assemble_class(${1:mixed *elements})"
+    "assemble_class": {
+      "prefix": "assemble_class",
+      "body": "assemble_class(${1:mixed *elements})"
     },
     "base_name": {
       "prefix": "base_name",
@@ -27,9 +27,9 @@
       "prefix": "debug_message",
       "body": "debug_message(${1:string msg})"
     },
-    "disassemble_class" : {
-      "prefix" : "disassemble_class",
-      "body" : "disassemble_class(${1:mixed instantiated_class})"
+    "disassemble_class": {
+      "prefix": "disassemble_class",
+      "body": "disassemble_class(${1:mixed instantiated_class})"
     },
     "element_of": {
       "prefix": "",
@@ -39,9 +39,9 @@
       "prefix": "element_of",
       "body": "element_of(${1:mixed *arr})"
     },
-    "fetch_class_member" : {
-      "prefix" : "fetch_class_member",
-      "body" : "fetch_class_member(${1:mixed instantiated class}, ${2:int index})"
+    "fetch_class_member": {
+      "prefix": "fetch_class_member",
+      "body": "fetch_class_member(${1:mixed instantiated class}, ${2:int index})"
     },
     "fetch_variable": {
       "prefix": "fetch",
@@ -167,9 +167,9 @@
       "prefix": "shuffle",
       "body": "shuffle(${1:mixed *array})"
     },
-    "store_class_member" : {
-      "prefix" : "store_class_member",
-      "body" : "store_class_member(${1:mixed instantiated_class}, ${2:int index}, ${3:mixed value})"
+    "store_class_member": {
+      "prefix": "store_class_member",
+      "body": "store_class_member(${1:mixed instantiated_class}, ${2:int index}, ${3:mixed value})"
     },
     "store_variable": {
       "prefix": "store_variable",
@@ -178,6 +178,10 @@
     "string_difference": {
       "prefix": "string_difference",
       "body": "string_difference(${1:string a},${2:string b})"
+    },
+    "sys_network_ports": {
+      "prefix": "sys_network_ports",
+      "body": "sys_network_ports()"
     },
     "terminal_colour": {
       "prefix": "terminal_colour",
