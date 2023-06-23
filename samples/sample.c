@@ -58,3 +58,14 @@ Heckin' yeah we love a multiline array.
 lines ;
     return;
 }
+
+void run() {
+    string text = @text
+   The soft, black and white pelt has been expertly cured to preserve the 
+texture and hairs of the panda's fur. Though the skin is quite beautiful,
+the animal itself must have been even more majestic.
+text
+;
+
+}
+

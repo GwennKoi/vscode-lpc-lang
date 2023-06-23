@@ -120,7 +120,7 @@
 				<key>begin</key>
 				<string>@{1,2}(\w+)</string>
 				<key>end</key>
-				<string>^\1</string>
+				<string>^\1\b</string>
 				<key>name</key>
 				<string>string.unquoted.lpc</string>
 			</dict>
