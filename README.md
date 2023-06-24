@@ -11,6 +11,9 @@ Basic syntax highlighting for LPC
 
 ## Release Notes
 
+### v1.1.5
+* Fixing bug with end-marker of multi-line strings.
+
 ### v1.1.4
 * Trivial change, adding preprocessor directives to sample.h
 
