@@ -1,5 +1,8 @@
 # Change Log
 
+### v1.1.6
+* Adding syntax highlighting for ob->func()
+
 ### v1.1.5
 * Fixing bug with end-marker of multi-line strings.
 
