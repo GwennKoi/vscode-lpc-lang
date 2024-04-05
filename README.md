@@ -11,6 +11,9 @@ Basic syntax highlighting for LPC
 
 ## Release Notes
 
+### v1.1.6
+* Adding syntax highlighting for ob->func()
+
 ### v1.1.5
 * Fixing bug with end-marker of multi-line strings.
 
@@ -50,4 +53,3 @@ Basic syntax highlighting for LPC
 ## Contribute
 
 If you'd like to contribute please check out our project page: [GwennKoi/vscode-lpc-lang](http://github.com/GwennKoi/vscode-lpc-lang)
-
