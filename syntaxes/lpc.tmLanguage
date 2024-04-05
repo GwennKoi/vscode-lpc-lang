@@ -536,19 +536,20 @@
 						</dict>
 						<key>match</key>
 						<string>(?x)
-                     (?: (?= \s )  (?:(?&lt;=else|new|return) | (?&lt;!\w)) (\s+))?
-                     (\b
-                      (?!(while|for|do|if|else|foreach|switch|
-                          catch|return|
-                          mapping|mixed|int|float|class|function|
-                          string|object)\s*\()
-                        (?: `\(\)                  |
-                            `[-&lt;.&gt;^|&amp;*~/+%=!\[\]]+ |
-                            `[[:alnum:]_]            |
-                            [[:alpha:]_][[:alnum:]_]*+\b
-                        )++    # actual name
-                     )
-                     \s*(\()</string>
+							(?: (?= \s )  (?:(?&lt;=else|new|return) | (?&lt;!\w)) (\s+))?
+							(?:\b\w+->)?  # Added this part to match 'object->'
+							(\b
+							(?!(while|for|do|if|else|foreach|switch|
+								catch|return|
+								mapping|mixed|int|float|class|function|
+								string|object)\s*\()
+							(?: `\(\)                  |
+								`[-&lt;.&gt;^|&amp;*~/+%=!\[\]]+ |
+								`[[:alnum:]_]            |
+								[[:alpha:]_][[:alnum:]_]*+\b
+							)++    # actual name
+							)
+							\s*(\()</string>
 						<key>name</key>
 						<string>meta.function-call.lpc</string>
 					</dict>
