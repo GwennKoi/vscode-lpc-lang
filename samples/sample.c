@@ -46,6 +46,7 @@ varargs nomask void some_function(int a, float b, mapping c, string d) {
 
     ob->remove() ;
     this_object()->remove() ;
+    remove() ;
 
     multi_line_string = @text
 This is a multiline string.
@@ -61,11 +62,10 @@ lines ;
 
 void run() {
     string text = @text
-   The soft, black and white pelt has been expertly cured to preserve the 
+   The soft, black and white pelt has been expertly cured to preserve the
 texture and hairs of the panda's fur. Though the skin is quite beautiful,
 the animal itself must have been even more majestic.
 text
 ;
 
 }
-
