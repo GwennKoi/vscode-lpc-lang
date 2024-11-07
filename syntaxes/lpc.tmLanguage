@@ -106,7 +106,7 @@
 				<key>comment</key>
 				<string>Numeric values</string>
 				<key>match</key>
-				<string>(?:\b|(?&lt;!\.)(?=\.))((0(x|X)[0-9a-fA-F]*)|(([0-9_]+\.?[0-9_]*)|(\.[0-9_]+))((-)?[0-9_]+)?)\b</string>
+				<string>(?:\b|(?&lt;!\.)(?=\.))((0(x|X)[0-9a-fA-F_]*)|(([0-9_]+\.?[0-9_]*)|(\.[0-9_]+))((-)?[0-9_]+)?)\b</string>
 				<key>name</key>
 				<string>constant.numeric.lpc</string>
 			</dict>
