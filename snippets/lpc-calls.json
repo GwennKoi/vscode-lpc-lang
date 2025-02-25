@@ -5,7 +5,7 @@
     },
     "call_out": {
         "prefix": "call_out",
-        "body": "call_other(${1:string|function fun},${2:float|int delay}${3:,mixed arg})"
+        "body": "call_out(${1:string|function fun},${2:float|int delay}${3:,mixed arg})"
     },
     "call_out_walltime" : {
         "prefix": "call_out_walltime",
