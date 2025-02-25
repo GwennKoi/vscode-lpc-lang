@@ -11,6 +11,10 @@ Basic syntax highlighting for LPC
 
 ## Release Notes
 
+### v1.1.7
+* Allow underscore in hex numeric literals. ie: `x = 0xCAFE_BABE;`
+* Fixed issue where call_out() snippet gave code for call_other()
+
 ### v1.1.6
 * Adding syntax highlighting for ob->func()
 
