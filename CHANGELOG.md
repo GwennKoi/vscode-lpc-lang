@@ -1,27 +1,52 @@
 # Change Log
 
-### v1.1.7
+## Unreleased
+
+* Backported FluffOS syntax highlighting from the LPC Language Server:
+  * `async` modifier, `await` and `acatch` keywords, and the `promise` type
+  * `time_expression` keyword, the `buffer` type, and `struct` (a synonym for
+    `class`, depending on driver configuration)
+  * Template literals: `` `Hello ${name}` `` with `${...}` interpolation and
+    the template-only escapes `` \` `` and `\$`
+  * Undefined-coalescing `??`, logical assignment `||=`, `&&=`, `??=`, and
+    optional chaining `m?.key` / `m?.[idx]`
+  * Functional implicit parameters `$1`..`$9` and `$(expr)` captured values
+* `&&` and `||` are now scoped as logical operators rather than as two bitwise
+  operators.
+* A function call after `await`, `case`, `in`, `do`, or `catch` (e.g.
+  `case foo():`, `foreach (x in foo())`) is no longer highlighted as a function
+  declaration, which could also swallow the highlighting of the functions that
+  followed.
+
+## v1.1.7
+
 * Allow underscore in hex numeric literals. ie: `x = 0xCAFE_BABE;`
 * Fixed issue where `call_out()` snippet gave code for `call_other()`
 
-### v1.1.6
+## v1.1.6
+
 * Adding syntax highlighting for `ob->func()`
 
-### v1.1.5
+## v1.1.5
+
 * Fixing bug with end-marker of multi-line strings.
 
-### v1.1.4
+## v1.1.4
+
 * Trivial change, adding preprocessor directives to sample.h
 
-### v1.1.3
+## v1.1.3
+
 * Added the following efun snippets: `time_ns()`, `sys_network_ports()`, `sys_reload_tls()`
 
-### v1.1.2
+## v1.1.2
+
 * Added `varargs` to `storage.modifier.lpc`
 * Fixed `.` and `->` access to accessing class members as `keyword.operator.access.lpc`
 * Added `_` separator for integer and float literals in `constant.numeric.lpc`
 
-### v1.1.1
+## v1.1.1
+
 * Removed triangular brackets that were causing issues. `<` and `>` are not
   used in FluffOS as brackets. If needed for other drivers, can re-evaluate
   in the future.
@@ -32,31 +57,40 @@
 * Added various LPC-language support for syntax highlighting.
 
 ## v 1.1.0
+
 * Added GMCP snippets
 
 ## v 1.0.5
+
 * Reverted out the language server items for the moment
 
 ## v 1.0.2
+
 * Added and removed some efuns from snippets (thanks to gesslar)
 
 ## v 1.0.0
+
 * Strings are now handled by the language server.
 * The language server should fix the @text/text block issues.
 
 ## v 0.4.0
+
 * Fixed issue with snippets (thanks to gesslar)
 * Added .lpc as a filetype
 
 ## v 0.3.0
+
 * Added standard color tag support
 * Fixed issue with extra paren appearing when defining mappings and arrays.
 
 ## v 0.2.1
+
 * Added icon and some metadata changes.
 
 ## v 0.2.0
+
 * Added more efun references.
 
 ## v 0.1.0
+
 * Setup LPC Language based off of Pike

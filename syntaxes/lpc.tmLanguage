@@ -84,13 +84,13 @@
 				<key>comment</key>
 				<string>Control flow keywords</string>
 				<key>match</key>
-				<string>\b(if|else|while|for|foreach|do|return|continue|break|switch|case|default|catch|inherit)\b</string>
+				<string>\b(if|else|while|for|foreach|do|return|continue|break|switch|case|default|catch|acatch|await|time_expression|inherit)\b</string>
 				<key>name</key>
 				<string>keyword.control.lpc</string>
 			</dict>
 			<dict>
 				<key>match</key>
-				<string>\b(float|int|void|object|class|mapping|string|mixed|function|ref)\b</string>
+				<string>\b(float|int|void|object|class|mapping|string|mixed|function|ref|buffer|promise|struct)\b</string>
 				<key>name</key>
 				<string>support.type.primitive.lpc</string>
 			</dict>
@@ -98,9 +98,25 @@
 				<key>comment</key>
 				<string>Modifiers</string>
 				<key>match</key>
-				<string>\b(public|private|protected|nosave|nomask|varargs)\b</string>
+				<string>\b(public|private|protected|nosave|nomask|varargs|async)\b</string>
 				<key>name</key>
 				<string>storage.modifier.lpc</string>
+			</dict>
+			<dict>
+				<key>comment</key>
+				<string>Functional implicit parameters: $1 .. $9. Listed before the numeric rule because the digits would otherwise be tokenized on their own, leaving the '$' unscoped. '$' is a valid identifier character in LPC, so the boundaries keep this from matching inside a name like 'x$1'.</string>
+				<key>match</key>
+				<string>(?&lt;![A-Za-z0-9_$])\$[0-9]+(?![A-Za-z0-9_$])</string>
+				<key>name</key>
+				<string>variable.parameter.lpc</string>
+			</dict>
+			<dict>
+				<key>comment</key>
+				<string>The '$' of a '$(expr)' captured value in a functional, as in '(: $(tp) :)'. Only the '$' is matched so the parentheses still nest normally. Same boundary guard as above: '$' is an identifier character, so a call to a function actually named 'x$' must not light up.</string>
+				<key>match</key>
+				<string>(?&lt;![A-Za-z0-9_$])\$(?=\()</string>
+				<key>name</key>
+				<string>keyword.operator.lpc</string>
 			</dict>
 			<dict>
 				<key>comment</key>
@@ -156,6 +172,43 @@
 					<dict>
 						<key>include</key>
 						<string>#string_placeholder</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>comment</key>
+				<string>Template literals: `...` with ${expr} interpolation (FluffOS).</string>
+				<key>begin</key>
+				<string>`</string>
+				<key>beginCaptures</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.definition.string.template.begin.lpc</string>
+					</dict>
+				</dict>
+				<key>end</key>
+				<string>`</string>
+				<key>endCaptures</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.definition.string.template.end.lpc</string>
+					</dict>
+				</dict>
+				<key>name</key>
+				<string>string.template.lpc</string>
+				<key>patterns</key>
+				<array>
+					<dict>
+						<key>include</key>
+						<string>#template_escaped_char</string>
+					</dict>
+					<dict>
+						<key>include</key>
+						<string>#template_interpolation</string>
 					</dict>
 				</array>
 			</dict>
@@ -337,7 +390,7 @@
 			</dict>
 			<dict>
 				<key>begin</key>
-				<string>(?x)(?:^|(?:(?=\s)(?&lt;!else|return)(?&lt;=\w)|(?=\s*[[:alnum:]_.|\(\)])))(\s*)(?!\b(while|for|do|if|else|switch|catch|return|foreach|object|int|float|function|mapping|string|mixed|class)\b\s*)((?:`\(\)|`[-&lt;.&gt;^|&amp;*~/+%=!\[\]]+|`[[:alpha:]_][[:alnum:]_]*+|[[:alpha:]_][[:alnum:]_]*+)++)\s*(?=\()</string>
+				<string>(?x)(?:^|(?:(?=\s)(?&lt;!\belse|\breturn|\bawait|\bcase|\bin|\bdo|\bcatch)(?&lt;=\w)|(?=\s*[[:alnum:]_.|\(\)])))(\s*)(?!\b(while|for|do|if|else|switch|catch|acatch|time_expression|return|foreach|object|int|float|function|mapping|string|mixed|class|struct)\b\s*)((?:`\(\)|`[-&lt;.&gt;^|&amp;*~/+%=!\[\]]+|`[[:alpha:]_][[:alnum:]_]*+|[[:alpha:]_][[:alnum:]_]*+)++)\s*(?=\()</string>
 				<key>beginCaptures</key>
 				<dict>
 					<key>1</key>
@@ -518,12 +571,12 @@
 						</dict>
 						<key>match</key>
 						<string>(?x)
-							(?: (?= \s )  (?:(?&lt;=else|new|return) | (?&lt;!\w)) (\s+))?
+							(?: (?= \s )  (?:(?&lt;=\belse|\bnew|\breturn|\bawait|\bcase|\bin|\bdo|\bcatch) | (?&lt;!\w)) (\s+))?
 							(?:\b\w+->)?  # Added this part to match 'object->'
 							(\b
 							(?!(while|for|do|if|else|foreach|switch|
-								catch|return|
-								mapping|mixed|int|float|class|function|
+								catch|acatch|time_expression|return|
+								mapping|mixed|int|float|class|struct|function|
 								string|object)\s*\()
 							(?: `\(\)                  |
 								`[-&lt;.&gt;^|&amp;*~/+%=!\[\]]+ |
@@ -946,6 +999,63 @@
 					</dict>
 				</array>
 			</dict>
+			<key>template_escaped_char</key>
+			<dict>
+				<key>comment</key>
+				<string>Same as string_escaped_char, but also allows \` and \$ which are valid only inside template literals.</string>
+				<key>patterns</key>
+				<array>
+					<dict>
+						<key>match</key>
+						<string>\\(\\|`|\$|[0-3]\d{,2}|[4-7]\d?|x[a-fA-F0-9]{,2}|u[a-fA-F0-9]{,4}|U[a-fA-F0-9]{,8}|d[0-9]+|[[:alnum:]'"?])</string>
+						<key>name</key>
+						<string>constant.character.escape.lpc</string>
+					</dict>
+					<dict>
+						<key>match</key>
+						<string>\\.</string>
+						<key>name</key>
+						<string>invalid.illegal.unknown-escape.lpc</string>
+					</dict>
+				</array>
+			</dict>
+			<key>template_interpolation</key>
+			<dict>
+				<key>patterns</key>
+				<array>
+					<dict>
+						<key>begin</key>
+						<string>\$\{</string>
+						<key>beginCaptures</key>
+						<dict>
+							<key>0</key>
+							<dict>
+								<key>name</key>
+								<string>punctuation.definition.template-expression.begin.lpc</string>
+							</dict>
+						</dict>
+						<key>end</key>
+						<string>\}</string>
+						<key>endCaptures</key>
+						<dict>
+							<key>0</key>
+							<dict>
+								<key>name</key>
+								<string>punctuation.definition.template-expression.end.lpc</string>
+							</dict>
+						</dict>
+						<key>name</key>
+						<string>meta.template.expression.lpc</string>
+						<key>patterns</key>
+						<array>
+							<dict>
+								<key>include</key>
+								<string>$self</string>
+							</dict>
+						</array>
+					</dict>
+				</array>
+			</dict>
 			<key>string_placeholder</key>
 			<dict>
 				<key>patterns</key>
@@ -989,6 +1099,14 @@
 				<key>patterns</key>
 				<array>
 					<dict>
+						<key>comment</key>
+						<string>FluffOS optional chaining operator (m?.key, m?.[idx]). Negative lookahead keeps a ternary's float branch ('cond ? .5 : x') scoping as '?' then a numeric literal.</string>
+						<key>match</key>
+						<string>\?\.(?![0-9])</string>
+						<key>name</key>
+						<string>keyword.operator.access.optional.lpc</string>
+					</dict>
+					<dict>
 						<key>match</key>
 						<string>\-\-</string>
 						<key>name</key>
@@ -1005,6 +1123,20 @@
 						<string>[\+\-\*/%]\s*=</string>
 						<key>name</key>
 						<string>keyword.operator.assignment.compound.lpc</string>
+					</dict>
+					<dict>
+						<key>comment</key>
+						<string>Logical rules precede the bitwise ones: rules matching at the same position are tried in order, so '&amp;' would otherwise claim the first character of '&amp;&amp;' and '&amp;&amp;='.</string>
+						<key>match</key>
+						<string>&amp;&amp;=|\|\|=|\?\?=</string>
+						<key>name</key>
+						<string>keyword.operator.assignment.compound.logical.lpc</string>
+					</dict>
+					<dict>
+						<key>match</key>
+						<string>&amp;&amp;|!(?!=)|\|\||\?\?</string>
+						<key>name</key>
+						<string>keyword.operator.logical.lpc</string>
 					</dict>
 					<dict>
 						<key>match</key>
@@ -1035,12 +1167,6 @@
 						<string>&lt;=|&gt;=|&lt;|&gt;</string>
 						<key>name</key>
 						<string>keyword.operator.relational.lpc</string>
-					</dict>
-					<dict>
-						<key>match</key>
-						<string>&amp;&amp;|!|\|\|</string>
-						<key>name</key>
-						<string>keyword.operator.logical.lpc</string>
 					</dict>
 					<dict>
 						<key>match</key>
